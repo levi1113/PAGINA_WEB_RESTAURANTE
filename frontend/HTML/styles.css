@@ -1,0 +1,6 @@
+.menu-with-bg-custom {
+  background-image:('../images/fondomenu.jpg');  /* ← ESTA LÍNEA */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

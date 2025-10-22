@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asistente Culinario - Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .typing-dots {
+      display: inline-flex;
+      gap: 2px;
+    }
+    .typing-dots span {
+      width: 4px;
+      height: 4px;
+      background: #d4af37;
+      border-radius: 50%;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="bg-white text-[#2c2c2c]">
+
+  <!-- NAVBAR -->
+  <header class="bg-black text-[#d4af37] sticky top-0 z-50 flex justify-between items-center px-16 py-6">
+    <div class="text-xl font-bold tracking-wider">PARRILLA 3 ELEMENTOS</div>
+    <nav>
+      <ul class="flex gap-8 list-none">
+        <li><a href="index.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Nosotros</a></li>
+        <li><a href="menu.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Menú</a></li>
+        <li><a href="reserva.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Reservar</a></li>
+        <li><a href="contacto.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Contacto</a></li>
+        <li><a href="ia.html" class="text-[#d4af37] font-medium border-b-2 border-[#d4af37]">IA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO ASISTENTE -->
+  <section class="relative h-96 bg-cover bg-center bg-fixed" style="background-image: url('../images/iahero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <h1 class="text-6xl text-white font-light mb-6 tracking-tight">ASISTENTE CULINARIO</h1>
+        <div class="w-20 h-1 bg-[#d4af37] mx-auto mb-6"></div>
+        <p class="text-xl text-gray-200 max-w-2xl mx-auto">Descubra recomendaciones personalizadas basadas en sus preferencias</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERFAZ DEL ASISTENTE -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl text-[#2c2c2c] font-light mb-4">¿QUÉ SE LE ANTOJA HOY?</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Describa sus preferencias y nuestro asistente le sugerirá platillos perfectos para usted</p>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="bg-[#f8f5f0] rounded-2xl p-8 mb-8">
+        <!-- Mensajes del Chat -->
+        <div class="space-y-6 mb-8 max-h-96 overflow-y-auto">
+          <!-- Mensaje del Asistente -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="bg-white rounded-2xl rounded-tl-none px-6 py-4 shadow-sm">
+              <p class="text-gray-700">Hola, soy su asistente culinario. Puedo ayudarle a encontrar platillos perfectos basados en:</p>
+              <ul class="mt-3 space-y-2 text-gray-600 text-sm">
+                <li class="flex items-center">
+                  <div class="w-1 h-1 bg-[#d4af37] rounded-full mr-3"></div>
+                  Preferencias de sabor (dulce, salado, picante, etc.)
+                </li>
+                <li class="flex items-center">
+                  <div class="w-1 h-1 bg-[#d4af37] rounded-full mr-3"></div>
+                  Restricciones dietéticas (diabético, sin gluten, etc.)
+                </li>
+                <li class="flex items-center">
+                  <div class="w-1 h-1 bg-[#d4af37] rounded-full mr-3"></div>
+                  Tipo de proteína (carne, mariscos, vegetariano)
+                </li>
+                <li class="flex items-center">
+                  <div class="w-1 h-1 bg-[#d4af37] rounded-full mr-3"></div>
+                  Ocasión especial (romántica, familiar, celebración)
+                </li>
+              </ul>
+              <p class="mt-4 text-gray-700">¿Qué se le antoja hoy?</p>
+            </div>
+          </div>
+
+          <!-- Ejemplos de mensajes del usuario -->
+          <div class="flex items-start gap-4 justify-end">
+            <div class="bg-[#2c2c2c] text-white rounded-2xl rounded-tr-none px-6 py-4 shadow-sm max-w-md">
+              <p>Hoy tengo antojo de algo dulce pero con carne</p>
+            </div>
+            <div class="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 justify-end">
+            <div class="bg-[#2c2c2c] text-white rounded-2xl rounded-tr-none px-6 py-4 shadow-sm max-w-md">
+              <p>Soy diabético, ¿qué me recomiendan?</p>
+            </div>
+            <div class="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input del Usuario -->
+        <div class="border-t border-gray-200 pt-6">
+          <form class="flex gap-4">
+            <input 
+              type="text" 
+              class="flex-1 border-b-2 border-gray-300 px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#d4af37] transition-colors duration-300 bg-transparent" 
+              placeholder="Describa lo que se le antoja hoy..."
+              id="userInput"
+            >
+            <button 
+              type="submit" 
+              class="bg-[#2c2c2c] text-white px-8 py-3 rounded-2xl transition-all duration-300 hover:bg-[#d4af37] font-medium"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Categorías Rápidas -->
+      <div class="text-center mb-16">
+        <h3 class="text-2xl text-[#2c2c2c] font-light mb-8">O seleccione una categoría</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <button class="category-btn border-2 border-gray-200 text-gray-600 py-4 rounded-2xl transition-all duration-300 hover:border-[#d4af37] hover:text-[#2c2c2c] font-medium">
+            Diabético
+          </button>
+          <button class="category-btn border-2 border-gray-200 text-gray-600 py-4 rounded-2xl transition-all duration-300 hover:border-[#d4af37] hover:text-[#2c2c2c] font-medium">
+            Sin Gluten
+          </button>
+          <button class="category-btn border-2 border-gray-200 text-gray-600 py-4 rounded-2xl transition-all duration-300 hover:border-[#d4af37] hover:text-[#2c2c2c] font-medium">
+            Vegetariano
+          </button>
+          <button class="category-btn border-2 border-gray-200 text-gray-600 py-4 rounded-2xl transition-all duration-300 hover:border-[#d4af37] hover:text-[#2c2c2c] font-medium">
+            Bajo en Grasa
+          </button>
+        </div>
+      </div>
+
+      <!-- Resultados de Recomendaciones -->
+      <div id="recommendations" class="hidden">
+        <h3 class="text-3xl text-[#2c2c2c] font-light mb-8 text-center">Recomendaciones para usted</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Las recomendaciones se generarán aquí dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN SOBRE EL ASISTENTE -->
+  <section class="py-20 bg-[#0a0a0a] text-white">
+    <div class="max-w-4xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl text-white font-light mb-4">¿CÓMO FUNCIONA?</h2>
+        <div class="w-20 h-1 bg-[#d4af37] mx-auto mb-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-black font-bold text-lg">1</span>
+          </div>
+          <h3 class="text-xl text-white font-light mb-4">Describa sus preferencias</h3>
+          <p class="text-gray-400">Comparta lo que se le antoja, restricciones dietéticas o tipo de comida que busca</p>
+        </div>
+
+        <div class="p-6">
+          <div class="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-black font-bold text-lg">2</span>
+          </div>
+          <h3 class="text-xl text-white font-light mb-4">Análisis inteligente</h3>
+          <p class="text-gray-400">Nuestro sistema analiza más de 100 platillos para encontrar las mejores opciones</p>
+        </div>
+
+        <div class="p-6">
+          <div class="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-black font-bold text-lg">3</span>
+          </div>
+          <h3 class="text-xl text-white font-light mb-4">Recomendaciones personalizadas</h3>
+          <p class="text-gray-400">Reciba sugerencias específicas adaptadas a sus necesidades y preferencias</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-[#777] py-12">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg mb-4">PARRILLA 3 ELEMENTOS</h3>
+          <p class="text-sm">Tecnología al servicio de su experiencia gastronómica.</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">ASISTENTE CULINARIO</h4>
+          <p class="text-sm">Recomendaciones personalizadas</p>
+          <p class="text-sm">Análisis inteligente</p>
+          <p class="text-sm">Adaptado a sus necesidades</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">HORARIOS</h4>
+          <p class="text-sm">Lunes a Jueves: 13:00 - 22:00</p>
+          <p class="text-sm">Viernes a Domingo: 12:00 - 23:00</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">CONTACTO</h4>
+          <p class="text-sm">+52 55 1234 5678</p>
+          <p class="text-sm">contacto@parrilla3elementos.com</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>&copy; 2025 Parrilla 3 Elementos. Asistente culinario con IA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simulación básica del asistente
+    document.addEventListener('DOMContentLoaded', function() {
+      const userInput = document.getElementById('userInput');
+      const form = document.querySelector('form');
+      const recommendations = document.getElementById('recommendations');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+
+      // Base de datos de platillos (simulada)
+      const menuItems = {
+        diabetic: [
+          { name: 'Filete de Res a la Plancha', description: 'Corte premium con vegetales al vapor', price: '$580' },
+          { name: 'Salmón con Espárragos', description: 'Salmón noruego con espárragos trigueros', price: '$520' },
+          { name: 'Ensalada de Quinoa', description: 'Quinoa con vegetales frescos y vinagreta ligera', price: '$320' }
+        ],
+        glutenFree: [
+          { name: 'Rib Eye Prime', description: 'Corte prime 180 días madurado', price: '$850' },
+          { name: 'Pulpo a la Gallega', description: 'Pulpo gallego con pimentón y aceite de oliva', price: '$420' },
+          { name: 'Ensalada Capresse', description: 'Tomate, mozzarella di bufala y albahaca', price: '$280' }
+        ],
+        // ... más categorías
+      };
+
+      function showRecommendations(category) {
+        const items = menuItems[category] || [];
+        const container = recommendations.querySelector('.grid');
+        container.innerHTML = '';
+
+        items.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'bg-white rounded-2xl p-6 shadow-sm border border-gray-100';
+          card.innerHTML = `
+            <h4 class="text-xl text-[#2c2c2c] font-light mb-2">${item.name}</h4>
+            <p class="text-gray-600 mb-4">${item.description}</p>
+            <div class="flex justify-between items-center">
+              <span class="text-[#d4af37] font-bold">${item.price}</span>
+              <button class="text-[#2c2c2c] text-sm font-medium hover:text-[#d4af37] transition-colors">
+                Ver detalles
+              </button>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+
+        recommendations.classList.remove('hidden');
+      }
+
+      // Event listeners
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const category = this.textContent.trim().toLowerCase().replace(' ', '');
+          showRecommendations(category);
+        });
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = userInput.value.trim().toLowerCase();
+        
+        if (input) {
+          // Simular procesamiento de IA
+          setTimeout(() => {
+            if (input.includes('diabético') || input.includes('diabetes')) {
+              showRecommendations('diabetic');
+            } else if (input.includes('gluten')) {
+              showRecommendations('glutenFree');
+            } else {
+              // Mostrar recomendaciones generales
+              showRecommendations('diabetic'); // Por ahora muestra diabético como ejemplo
+            }
+            userInput.value = '';
+          }, 1000);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

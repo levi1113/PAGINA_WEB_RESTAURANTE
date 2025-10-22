@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f8f5f0] text-[#2c2c2c]">
+
+  <!-- NAVBAR -->
+  <header class="bg-black text-[#d4af37] sticky top-0 z-50 flex justify-between items-center px-16 py-6">
+    <div class="text-xl font-bold tracking-wider">PARRILLA 3 ELEMENTOS</div>
+    <nav>
+      <ul class="flex gap-8 list-none">
+        <li><a href="index.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Nosotros</a></li>
+        <li><a href="menu.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Menú</a></li>
+        <li><a href="reserva.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Reservar</a></li>
+        <li><a href="contacto.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Contacto</a></li>
+        <li><a href="ia.html" class="text-[#d4af37] font-medium border-b-2 border-[#d4af37]">IA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- HERO MENÚ -->
+  <section class="relative h-80 bg-cover bg-center bg-fixed" style="background-image: url('../images/heroprincipal.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h1 class="text-6xl text-[#d4af37] mb-4 font-bold">EXPERIENCIA GASTRONÓMICA</h1>
+        <p class="text-xl text-white">Una sinfonía de sabores cuidadosamente elaborada</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ENSALADAS Y ENTRADAS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl text-[#d4af37] mb-4">ENSALADAS & ENTRADAS</h2>
+        <p class="text-gray-600 text-lg">Inicie su experiencia con nuestros exquisitos preludios culinarios</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada Capresse Premium</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$280</span>
+            </div>
+            <p class="text-gray-600">Tomate heirloom, mozzarella di bufala, albahaca fresca, reducción balsámica aged 12 años</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tartar de Atún Ahi</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$320</span>
+            </div>
+            <p class="text-gray-600">Atún ahi grade A, aguacate hass, chalotas, salsa ponzu, chips de wonton</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Carpaccio de Res Wagyu</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$380</span>
+            </div>
+            <p class="text-gray-600">Láminas de res wagyu, rúcula, alcaparras, parmesano reggiano, aceite de trufa negra</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada de Quinoa Andina</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$260</span>
+            </div>
+            <p class="text-gray-600">Quinoa tricolor, aguacate, granada, nueces pecana, vinagreta de miel y jengibre</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tosta de Pulpo a la Gallega</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$300</span>
+            </div>
+            <p class="text-gray-600">Pulpo gallego, puré de papa ahumada, pimentón de la vera, aceite de oliva virgen extra</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Bruschetta Trilogy</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$270</span>
+            </div>
+            <p class="text-gray-600">Tres variedades: tomate y albahaca, championes salteados, prosciutto di parma</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada César Clásica</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$240</span>
+            </div>
+            <p class="text-gray-600">Lechuga romana, croutons artesanales, parmesano, anchoas, aderezo césar original</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Aguacates Rellenos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$290</span>
+            </div>
+            <p class="text-gray-600">Aguacates hass rellenos de cangrejo real, mango, cilantro y lima</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tabla de Embutidos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$350</span>
+            </div>
+            <p class="text-gray-600">Selección de jamón ibérico, salami toscano, chorizo pamplona, queso manchego</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada de Espárragos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$275</span>
+            </div>
+            <p class="text-gray-600">Espárragos trigueros, huevo pochado, virutas de jamón serrano, vinagreta de mostaza</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ostra Rockefeller</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$420</span>
+            </div>
+            <p class="text-gray-600">Ostras frescas gratinadas con espinacas, tocino y salsa bechamel</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ceviche Nikkei</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$310</span>
+            </div>
+            <p class="text-gray-600">Pescado blanco, leche de tigre, ají amarillo, camote, canchita serrana</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada de Remolacha</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$255</span>
+            </div>
+            <p class="text-gray-600">Remolacha asada, queso de cabra, nueces, microgreens, vinagreta de cítricos</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tartaleta de Champiñones</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$265</span>
+            </div>
+            <p class="text-gray-600">Mezcla de champiñones silvestres, crema de trufa, masa hojaldrada</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada Waldorf</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$245</span>
+            </div>
+            <p class="text-gray-600">Manzana verde, apio, nueces, uvas, mayonesa casera, lechuga butter</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Cocktail de Camarón</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$295</span>
+            </div>
+            <p class="text-gray-600">Camarones U15, salsa cóctel casera, aguacate, cebolla morada, cilantro</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada Griega</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$250</span>
+            </div>
+            <p class="text-gray-600">Pepino, tomate, cebolla roja, aceitunas kalamata, queso feta, orégano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Terrina de Foie Gras</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$480</span>
+            </div>
+            <p class="text-gray-600">Foie gras de pato, reducción de oporto, pan brioche tostado</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ensalada de Lentejas</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$230</span>
+            </div>
+            <p class="text-gray-600">Lentejas beluga, vegetales asados, vinagreta de dijon, hierbas frescas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Caponata de Berenjena</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$240</span>
+            </div>
+            <p class="text-gray-600">Berenjena asada, tomate, alcaparras, aceitunas, albahaca, pan focaccia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO CORTES PREMIUM -->
+  <section class="relative h-64 bg-cover bg-center bg-fixed" style="background-image: url('../images/cortehero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h2 class="text-5xl text-[#d4af37] mb-4 font-bold">CORTES PREMIUM</h2>
+        <p class="text-xl text-white">La excelencia carnívora en su máxima expresión</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CORTES PREMIUM -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Rib Eye Prime 180 Días</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$850</span>
+            </div>
+            <p class="text-gray-600">Corte prime madurado 180 días, marmoleo superior, acompañado de vegetales asados y reducción de vino tinto</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Filet Mignon Wagyu A5</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$1,200</span>
+            </div>
+            <p class="text-gray-600">Corte wagyu japonés grado A5, el más marmoleado, suave como mantequilla</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tomahawk 42 oz</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$1,100</span>
+            </div>
+            <p class="text-gray-600">Impresionante corte de 42 onzas con hueso, madurado 45 días, para compartir</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">New York Strip Prime</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$780</span>
+            </div>
+            <p class="text-gray-600">Corte New York con excelente marmoleo, sabor intenso y textura firme</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Porterhouse para Dos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$950</span>
+            </div>
+            <p class="text-gray-600">Combinación perfecta: filet mignon y New York strip en un mismo corte</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Costillas de Res BBQ</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$620</span>
+            </div>
+            <p class="text-gray-600">Costillas estilo americano, 8 horas ahumadas, salsa BBQ artesanal</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Flat Iron Steak</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$580</span>
+            </div>
+            <p class="text-gray-600">Corte poco conocido pero excepcional, muy jugoso y lleno de sabor</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Churrasco Argentino</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$720</span>
+            </div>
+            <p class="text-gray-600">Corte de entraña, marinado en chimichurri tradicional, sabor intenso</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Prime Brisket Ahumado</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$680</span>
+            </div>
+            <p class="text-gray-600">Pechera de res ahumada 12 horas, tierna y jugosa, corte texas style</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tri-Tip Steak</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$540</span>
+            </div>
+            <p class="text-gray-600">Corte triangular de la cadera, excelente relación calidad-precio</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Dry Aged Rib Eye 60 Días</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$980</span>
+            </div>
+            <p class="text-gray-600">Madurado en seco 60 días, sabor concentrado y textura extraordinaria</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Côte de Boeuf</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$1,050</span>
+            </div>
+            <p class="text-gray-600">Clásico francés, costilla de res con hueso, elegancia y tradición</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Picanha Brasileña</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$660</span>
+            </div>
+            <p class="text-gray-600">Corte supremo de la cocina brasileña, jugoso y lleno de carácter</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Filet Oscar</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$890</span>
+            </div>
+            <p class="text-gray-600">Filet mignon coronado con cangrejo, espárragos y salsa bearnaisa</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Prime T-Bone</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$920</span>
+            </div>
+            <p class="text-gray-600">Dos cortes en uno: filet y New York, experiencia completa</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Skirt Steak</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$590</span>
+            </div>
+            <p class="text-gray-600">Corte de falda, excelente para fajitas, sabor intenso y textura única</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Prime Hanger Steak</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$570</span>
+            </div>
+            <p class="text-gray-600">Corte de arrachera premium, muy sabroso y jugoso</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Beef Cheeks Bourguignon</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$530</span>
+            </div>
+            <p class="text-gray-600">Carrilleras de res estofadas en vino tinto, estilo francés clásico</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Prime Short Ribs</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$610</span>
+            </div>
+            <p class="text-gray-600">Costillas cortas braseadas, carne que se desprende del hueso</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Wagyu Burger</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$480</span>
+            </div>
+            <p class="text-gray-600">Hamburguesa de wagyu, queso brie, cebolla caramelizada, pan brioche</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO MARISCOS -->
+  <section class="relative h-64 bg-cover bg-center bg-fixed" style="background-image: url('../images/mariscos.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h2 class="text-5xl text-[#d4af37] mb-4 font-bold">DEL MAR A LA MESA</h2>
+        <p class="text-xl text-white">Frescura oceánica en cada bocado</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- SECCIÓN MARISCOS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Langosta Thermidor</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$950</span>
+            </div>
+            <p class="text-gray-600">Langosta entera gratinada con salsa thermidor, brandy y queso gruyère</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Paella Marinera</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$680</span>
+            </div>
+            <p class="text-gray-600">Arroz bomba, azafrán, mejillones, almejas, calamares, gambas, langostinos</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Pulpo a la Gallega Premium</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$420</span>
+            </div>
+            <p class="text-gray-600">Pulpo gallego, pimentón de la vera, aceite de oliva virgen extra, sal gruesa</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Camarones al Ajillo</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$380</span>
+            </div>
+            <p class="text-gray-600">Camarones U15, ajo laminado, guindilla, perejil, vino blanco</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Filete de Lubina a la Sal</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$450</span>
+            </div>
+            <p class="text-gray-600">Lubina de roca cocida en costra de sal marina, hierbas provenzales</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Mariscos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$520</span>
+            </div>
+            <p class="text-gray-600">Arroz arborio, caldo de pescado, azafrán, mejillones, almejas, gambas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ceviche Mixto Clásico</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$360</span>
+            </div>
+            <p class="text-gray-600">Pescado blanco, pulpo, camarones, calamar, leche de tigre, camote</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Salmón a la Plancha</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$480</span>
+            </div>
+            <p class="text-gray-600">Salmón noruego skin-on, puré de coliflor, espárragos, salsa de eneldo</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Almejas a la Marinera</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$320</span>
+            </div>
+            <p class="text-gray-600">Almejas gallegas, vino blanco, ajo, perejil, tomate concassé</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Cocktail de Camarón Gigante</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$390</span>
+            </div>
+            <p class="text-gray-600">Camarones tiger U10, salsa cóctel casera, aguacate, cebolla morada</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Atún Sellado con Sésamo</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$520</span>
+            </div>
+            <p class="text-gray-600">Atún ahi sellado, costra de sésamo, wasabi, jengibre, soya reducida</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Bouillabaisse Marsellesa</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$580</span>
+            </div>
+            <p class="text-gray-600">Sopa de pescados francesa, rouille, pan baguette, quesos del mediterráneo</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Gambas al Pil Pil</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$340</span>
+            </div>
+            <p class="text-gray-600">Gambas rojas, aceite de oliva, ajo, guindilla, emulsión característica</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Filete de Mero a la Veracruzana</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$460</span>
+            </div>
+            <p class="text-gray-600">Mero fresco, salsa veracruzana, aceitunas, alcaparras, hierbas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Calamares Fritos Artesanales</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$300</span>
+            </div>
+            <p class="text-gray-600">Calamares en anillos, harina de arroz, alioli de azafrán, limón</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Cazuela de Mariscos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$540</span>
+            </div>
+            <p class="text-gray-600">Mezcla de mariscos en cazuela de barro, tomate, vino blanco, azafrán</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tiradito de Corvina</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$380</span>
+            </div>
+            <p class="text-gray-600">Corvina en láminas, leche de tigre, rocoto, cilantro, camote</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Mejillones al Vapor</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$290</span>
+            </div>
+            <p class="text-gray-600">Mejillones de Galicia, vino blanco, chalota, apio, perejil</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Brocheta de Langostinos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$410</span>
+            </div>
+            <p class="text-gray-600">Langostinos tiger, pimientos, cebolla, marinada de hierbas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ceviche de Conchas Negras</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$440</span>
+            </div>
+            <p class="text-gray-600">Conchas negras de Tumbes, limón, cebolla, ají limo, culantro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO PASTAS & RISOTTOS -->
+  <section class="relative h-64 bg-cover bg-center bg-fixed" style="background-image: url('../images/pastahero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h2 class="text-5xl text-[#d4af37] mb-4 font-bold">PASTAS & RISOTTOS</h2>
+        <p class="text-xl text-white">La tradición italiana reinventada</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PASTAS & RISOTTOS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Trufa Negra</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$620</span>
+            </div>
+            <p class="text-gray-600">Arroz carnaroli, trufa negra fresca, parmesano, mantequilla, vino blanco</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Fettuccine Alfredo</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$380</span>
+            </div>
+            <p class="text-gray-600">Pasta fresca, salsa alfredo cremosa, parmesano reggiano, pimienta negra</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Spaghetti alla Carbonara</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$360</span>
+            </div>
+            <p class="text-gray-600">Spaghetti, guanciale, huevo, pecorino romano, pimienta negra</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Hongos Silvestres</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$450</span>
+            </div>
+            <p class="text-gray-600">Mezcla de hongos silvestres, ajo, perejil, vino marsala, parmesano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Lasagna della Casa</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$420</span>
+            </div>
+            <p class="text-gray-600">Láminas caseras, ragú de res, bechamel, mozzarella, parmesano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Penne all'Arrabbiata</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$340</span>
+            </div>
+            <p class="text-gray-600">Penne rigate, salsa de tomate picante, ajo, guindilla, perejil</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Mariscos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$520</span>
+            </div>
+            <p class="text-gray-600">Arroz arborio, caldo de pescado, azafrán, gambas, mejillones, almejas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Gnocchi de Papa</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$390</span>
+            </div>
+            <p class="text-gray-600">Gnocchi caseros, salsa de gorgonzola, nueces, espinacas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Linguine alle Vongole</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$480</span>
+            </div>
+            <p class="text-gray-600">Linguine, almejas frescas, ajo, vino blanco, perejil, aceite de oliva</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto Primavera</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$400</span>
+            </div>
+            <p class="text-gray-600">Verduras de temporada, albahaca, limón, queso parmesano</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Pappardelle al Cinghiale</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$540</span>
+            </div>
+            <p class="text-gray-600">Pappardelle anchas, ragú de jabalí, vino tinto, romero, tomate</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Espárragos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$430</span>
+            </div>
+            <p class="text-gray-600">Espárragos trigueros, limón, parmesano, albahaca, aceite de oliva</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tagliatelle al Tartufo</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$580</span>
+            </div>
+            <p class="text-gray-600">Tagliatelle frescas, salsa de trufa, crema, parmesano, perejil</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Ravioli de Ricotta</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$410</span>
+            </div>
+            <p class="text-gray-600">Ravioli relleno de ricotta, espinacas, salsa de tomate, albahaca</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Calabaza</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$390</span>
+            </div>
+            <p class="text-gray-600">Calabaza butternut, salvia, nuez moscada, queso parmesano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Bucatini all'Amatriciana</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$370</span>
+            </div>
+            <p class="text-gray-600">Bucatini, guanciale, tomate, pecorino, pimienta negra</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Limón</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$380</span>
+            </div>
+            <p class="text-gray-600">Limón siciliano, albahaca, vino blanco, queso parmesano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tortellini en Brodo</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$350</span>
+            </div>
+            <p class="text-gray-600">Tortellini de carne, caldo de pollo, parmesano, perejil</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Risotto de Salchicha</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$440</span>
+            </div>
+            <p class="text-gray-600">Salchicha italiana, vino tinto, romero, queso parmesano</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Spaghetti alle Vongole</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$460</span>
+            </div>
+            <p class="text-gray-600">Spaghetti, almejas, ajo, vino blanco, perejil, aceite de oliva</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO BEBIDAS & VINOS -->
+  <section class="relative h-64 bg-cover bg-center bg-fixed" style="background-image: url('../images/bebidashero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h2 class="text-5xl text-[#d4af37] mb-4 font-bold">BEBIDAS & VINOS</h2>
+        <p class="text-xl text-white">El maridaje perfecto para cada ocasión</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN BEBIDAS & VINOS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Château Margaux 2015</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$3,200</span>
+            </div>
+            <p class="text-gray-600">Premier Grand Cru Classé, Bordeaux, Francia. Tannins sedosos, final largo</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Screaming Eagle 2018</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$8,500</span>
+            </div>
+            <p class="text-gray-600">Cabernet Sauvignon, Napa Valley. Vino de culto, producción limitada</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Dom Pérignon 2010</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$4,800</span>
+            </div>
+            <p class="text-gray-600">Champagne vintage, burbuja fina, notas de pan tostado y frutos secos</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Old Fashioned Clásico</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$280</span>
+            </div>
+            <p class="text-gray-600">Bourbon Woodford Reserve, azúcar, bitters, twist de naranja</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Sassicaia 2019</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$2,800</span>
+            </div>
+            <p class="text-gray-600">Super Tuscan, Bolgheri. Cabernet Sauvignon, elegancia italiana</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Margarita Artesanal</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$240</span>
+            </div>
+            <p class="text-gray-600">Tequila reposado, Cointreau, jugo de lima fresco, sal de Himalaya</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Opus One 2017</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$3,600</span>
+            </div>
+            <p class="text-gray-600">Joint venture Mondavi-Rothschild, Napa Valley. Blend bordelés</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Negroni Perfecto</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$260</span>
+            </div>
+            <p class="text-gray-600">Gin, Campari, Vermut rosso, twist de naranja. Proporción perfecta</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Vega Sicilia Unico 2009</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$2,500</span>
+            </div>
+            <p class="text-gray-600">Tinto español legendario, Ribera del Duero. Gran potencial de guarda</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Mojito Cubano</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$220</span>
+            </div>
+            <p class="text-gray-600">Ron blanco, hierbabuena, lima, azúcar, soda. Refrescante y clásico</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Krug Grande Cuvée</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$3,900</span>
+            </div>
+            <p class="text-gray-600">Champagne de lujo, blend multi-vintage, complejidad excepcional</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Whisky Sour Premium</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$270</span>
+            </div>
+            <p class="text-gray-600">Bourbon Buffalo Trace, jugo de limón, jarabe, clara de huevo, bitters</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Penfolds Grange 2016</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$2,200</span>
+            </div>
+            <p class="text-gray-600">Shiraz australiano, icono mundial. Potente y elegante</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Aperol Spritz</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$200</span>
+            </div>
+            <p class="text-gray-600">Aperol, Prosecco, soda, naranja. El aperitivo italiano por excelencia</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Château d'Yquem 2015</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$3,400</span>
+            </div>
+            <p class="text-gray-600">Sauternes Premier Cru Supérieur. Dulce noble, botrytis perfecto</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Espresso Martini</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$250</span>
+            </div>
+            <p class="text-gray-600">Vodka, licor de café, espresso fresco, jarabe de azúcar</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Cloudy Bay Sauvignon Blanc</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$1,800</span>
+            </div>
+            <p class="text-gray-600">Marlborough, Nueva Zelanda. Cítricos intensos, mineralidad</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Manhattan Perfecto</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$290</span>
+            </div>
+            <p class="text-gray-600">Whisky rye, vermut rosso, bitters. Servido up con cereza</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Domaine de la Romanée-Conti</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$12,000</span>
+            </div>
+            <p class="text-gray-600">Burgundy legendario, Pinot Noir. El vino más exclusivo del mundo</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Gin Tonic Premium</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$230</span>
+            </div>
+            <p class="text-gray-600">Gin Hendrick's, tónica Fever-Tree, pepino, bayas de enebro, lima</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+    <!-- HERO POSTRES -->
+  <section class="relative h-64 bg-cover bg-center bg-fixed" style="background-image: url('../images/postreshero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div>
+        <h2 class="text-5xl text-[#d4af37] mb-4 font-bold">POSTRES & DELICIAS</h2>
+        <p class="text-xl text-white">El final perfecto para una experiencia sublime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN POSTRES -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Columna Izquierda -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Fondant au Chocolat</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$220</span>
+            </div>
+            <p class="text-gray-600">Chocolate belga 70% fundente, corazón líquido, helado de vainilla bourbon</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tiramisú Clásico</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$180</span>
+            </div>
+            <p class="text-gray-600">Savoiardi, café espresso, mascarpone, cacao, marsala</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Crème Brûlée</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$160</span>
+            </div>
+            <p class="text-gray-600">Crema de vainilla tahití, azúcar quemada crujiente, bayas frescas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Cheesecake de Frutos Rojos</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$190</span>
+            </div>
+            <p class="text-gray-600">Base de galleta, queso crema, compota de frutos rojos, reducción de frambuesa</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Profiteroles</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$210</span>
+            </div>
+            <p class="text-gray-600">Buñuelos de hojaldre, crema chantilly, salsa de chocolate caliente</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tarta de Manzana</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$170</span>
+            </div>
+            <p class="text-gray-600">Masa quebrada, manzanas reineta caramelizadas, canela, helado de vainilla</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Soufflé au Grand Marnier</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$240</span>
+            </div>
+            <p class="text-gray-600">Soufflé esponjoso, Grand Marnier, azúcar glass, crema inglesa</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Mousse de Chocolate</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$150</span>
+            </div>
+            <p class="text-gray-600">Chocolate negro 64%, textura aérea, crema batida, virutas de chocolate</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Panna Cotta de Vainilla</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$140</span>
+            </div>
+            <p class="text-gray-600">Crema italiana, vainilla de Madagascar, coulis de frutos del bosque</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tarta de Queso Vasca</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$200</span>
+            </div>
+            <p class="text-gray-600">Queso Idiazábal, textura cremosa, costra caramelizada, compota de membrillo</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="space-y-6">
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Macarons Surprise</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$260</span>
+            </div>
+            <p class="text-gray-600">Selección de 6 macarons: frambuesa, pistacho, chocolate, vainilla, limón, café</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Opera Cake</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$230</span>
+            </div>
+            <p class="text-gray-600">Capas de bizcocho, café, chocolate ganache, glaseado de chocolate</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Baklava</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$160</span>
+            </div>
+            <p class="text-gray-600">Capas de pasta filo, nueces, pistachos, miel, agua de rosas</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Semifreddo de Avellana</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$190</span>
+            </div>
+            <p class="text-gray-600">Helado semifreddo, praliné de avellana, salsa de chocolate blanco</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tarta de Santiago</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$170</span>
+            </div>
+            <p class="text-gray-600">Tarta de almendra, sin harina, crujiente por fuera y húmeda por dentro</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Coulant de Chocolate Blanco</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$210</span>
+            </div>
+            <p class="text-gray-600">Chocolate blanco, corazón de frutos rojos, helado de vainilla</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Millefeuille</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$220</span>
+            </div>
+            <p class="text-gray-600">Capas de hojaldre, crema pastelera, glaseado royal, frutos rojos</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Brioche Perdu</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$150</span>
+            </div>
+            <p class="text-gray-600">Brioche tostado, helado de vainilla, salsa de caramelo, nueces</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Tarta de Limón Merengue</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$180</span>
+            </div>
+            <p class="text-gray-600">Base de masa quebrada, crema de limón, merengue italiano tostado</p>
+          </div>
+
+          <div class="border-b border-gray-200 pb-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-semibold text-[#2c2c2c]">Selección de Helados Artesanales</h3>
+              <span class="text-[#d4af37] font-bold text-lg">$200</span>
+            </div>
+            <p class="text-gray-600">Tres bolas: vainilla tahití, chocolate 70%, dulce de leche argentino</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO FINAL -->
+  <section class="relative h-80 bg-cover bg-center bg-fixed" style="background-image: url('../images/menu-final-hero.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <h2 class="text-5xl text-[#d4af37] mb-6 font-bold">UNA EXPERIENCIA CULINARIA COMPLETA</h2>
+        <p class="text-xl text-white mb-8">Más de 100 platillos cuidadosamente elaborados para los paladares más exigentes</p>
+        <div class="flex gap-6 justify-center flex-wrap">
+          <a href="reserva.html" class="bg-[#d4af37] text-black font-bold py-4 px-8 rounded-full transition-all hover:bg-transparent hover:text-[#d4af37] hover:border-2 hover:border-[#d4af37] text-lg">
+            RESERVAR EXPERIENCIA
+          </a>
+          <a href="contacto.html" class="border-2 border-[#d4af37] text-[#d4af37] font-bold py-4 px-8 rounded-full transition-all hover:bg-[#d4af37] hover:text-black text-lg">
+            CONSULTAR MENÚ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-[#777] py-12">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg mb-4">PARRILLA 3 ELEMENTOS</h3>
+          <p class="text-sm">Donde la tierra, el mar y el cielo se encuentran en perfecta armonía gastronómica.</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">CONTACTO</h4>
+          <p class="text-sm">Av. Gourmet 123, Colonia Elegante</p>
+          <p class="text-sm">Ciudad de México, 11560</p>
+          <p class="text-sm">reservaciones@parrilla3elementos.com</p>
+          <p class="text-sm">+52 55 1234 5678</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">HORARIOS</h4>
+          <p class="text-sm">Lunes a Viernes: 1:00 PM - 11:00 PM</p>
+          <p class="text-sm">Sábado y Domingo: 12:00 PM - 12:00 AM</p>
+          <p class="text-sm text-[#d4af37] mt-2">Reservaciones recomendadas</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">SÍGUENOS</h4>
+          <div class="flex gap-4 mb-4">
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors text-sm">Instagram</a>
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors text-sm">Facebook</a>
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors text-sm">Twitter</a>
+          </div>
+          <div class="text-sm">
+            <p class="text-[#d4af37]">#Parrilla3Elementos</p>
+            <p class="text-[#d4af37]">#ExperienciaGourmet</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-sm">&copy; 2025 Parrilla 3 Elementos. Todos los derechos reservados. | Diseño gastronómico exclusivo</p>
+      </div>
+    </div>
+  </footer>
+

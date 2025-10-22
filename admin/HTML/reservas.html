@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas - Admin Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f5f0;
+    }
+  </style>
+</head>
+<body class="bg-[#f8f5f0] text-[#2c2c2c] min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-black border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-8">
+          <h1 class="text-xl text-[#d4af37] font-bold">PARRILLA 3 ELEMENTOS</h1>
+          <nav class="hidden md:flex gap-6">
+            <a href="dashboard.html" class="text-gray-400 hover:text-white transition-colors">Dashboard</a>
+            <a href="reservas.html" class="text-gray-400 hover:text-white transition-colors">Reservas</a>
+            <a href="clientes.html" class="text-gray-400 hover:text-white transition-colors">Clientes</a>
+            <a href="configuracion.html" class="text-white border-b-2 border-[#d4af37]">Configuración</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-gray-400 text-sm">admin@parrilla3elementos.com</span>
+          <a href="login.html" class="bg-[#d4af37] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#f5d67b] transition-colors">
+            Cerrar Sesión
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    
+    <!-- FILTROS Y ESTADÍSTICAS -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+      <!-- Estadísticas -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <div class="text-center">
+          <div class="text-3xl text-[#d4af37] font-bold mb-2">12</div>
+          <div class="text-gray-600 text-sm">Reservas Hoy</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <div class="text-center">
+          <div class="text-3xl text-green-600 font-bold mb-2">8</div>
+          <div class="text-gray-600 text-sm">Confirmadas</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <div class="text-center">
+          <div class="text-3xl text-yellow-500 font-bold mb-2">3</div>
+          <div class="text-gray-600 text-sm">Pendientes</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <div class="text-center">
+          <div class="text-3xl text-red-500 font-bold mb-2">1</div>
+          <div class="text-gray-600 text-sm">Canceladas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA DE HERRAMIENTAS -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6">
+      <div class="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
+        <div class="flex gap-4 items-center">
+          <input 
+            type="date" 
+            class="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:border-[#d4af37] transition-colors"
+            id="fechaFiltro"
+          >
+          <select class="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:border-[#d4af37] transition-colors">
+            <option value="">Todos los estados</option>
+            <option value="confirmada">Confirmadas</option>
+            <option value="pendiente">Pendientes</option>
+            <option value="cancelada">Canceladas</option>
+          </select>
+        </div>
+        <div class="flex gap-3">
+          <button class="bg-[#2c2c2c] text-white px-6 py-2 rounded-xl hover:bg-[#d4af37] transition-colors font-medium">
+            Exportar
+          </button>
+          <button class="bg-[#d4af37] text-[#2c2c2c] px-6 py-2 rounded-xl hover:bg-[#f5d67b] transition-colors font-medium">
+            Nueva Reserva
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLA DE RESERVAS -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead class="bg-[#f8f5f0] border-b border-gray-200">
+            <tr>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Cliente</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Fecha</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Hora</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Personas</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Teléfono</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Estado</th>
+              <th class="text-left py-4 px-6 text-sm font-medium text-gray-700">Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <!-- Reserva 1 -->
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-4 px-6">
+                <div>
+                  <div class="font-medium text-gray-900">María González</div>
+                  <div class="text-sm text-gray-500">maria@email.com</div>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-gray-700">15/01/2024</td>
+              <td class="py-4 px-6 text-gray-700">19:00</td>
+              <td class="py-4 px-6 text-gray-700">2 personas</td>
+              <td class="py-4 px-6 text-gray-700">+52 55 1234 5678</td>
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                  Confirmada
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex gap-2">
+                  <button class="text-blue-600 hover:text-blue-800 transition-colors" title="Editar">
+                    ✏️
+                  </button>
+                  <button class="text-red-600 hover:text-red-800 transition-colors" title="Cancelar">
+                    ❌
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 transition-colors" title="Ver detalles">
+                    👁️
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Reserva 2 -->
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-4 px-6">
+                <div>
+                  <div class="font-medium text-gray-900">Carlos Rodríguez</div>
+                  <div class="text-sm text-gray-500">carlos@empresa.com</div>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-gray-700">15/01/2024</td>
+              <td class="py-4 px-6 text-gray-700">20:30</td>
+              <td class="py-4 px-6 text-gray-700">6 personas</td>
+              <td class="py-4 px-6 text-gray-700">+52 55 8765 4321</td>
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                  Pendiente
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex gap-2">
+                  <button class="text-green-600 hover:text-green-800 transition-colors" title="Confirmar">
+                    ✅
+                  </button>
+                  <button class="text-red-600 hover:text-red-800 transition-colors" title="Cancelar">
+                    ❌
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 transition-colors" title="Ver detalles">
+                    👁️
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Reserva 3 -->
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-4 px-6">
+                <div>
+                  <div class="font-medium text-gray-900">Ana Martínez</div>
+                  <div class="text-sm text-gray-500">ana.m@email.com</div>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-gray-700">15/01/2024</td>
+              <td class="py-4 px-6 text-gray-700">21:00</td>
+              <td class="py-4 px-6 text-gray-700">4 personas</td>
+              <td class="py-4 px-6 text-gray-700">+52 55 5555 1234</td>
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                  Confirmada
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex gap-2">
+                  <button class="text-blue-600 hover:text-blue-800 transition-colors" title="Editar">
+                    ✏️
+                  </button>
+                  <button class="text-red-600 hover:text-red-800 transition-colors" title="Cancelar">
+                    ❌
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 transition-colors" title="Ver detalles">
+                    👁️
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Reserva 4 -->
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-4 px-6">
+                <div>
+                  <div class="font-medium text-gray-900">Roberto Silva</div>
+                  <div class="text-sm text-gray-500">roberto@email.com</div>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-gray-700">16/01/2024</td>
+              <td class="py-4 px-6 text-gray-700">14:00</td>
+              <td class="py-4 px-6 text-gray-700">8 personas</td>
+              <td class="py-4 px-6 text-gray-700">+52 55 9999 8888</td>
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                  Pendiente
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex gap-2">
+                  <button class="text-green-600 hover:text-green-800 transition-colors" title="Confirmar">
+                    ✅
+                  </button>
+                  <button class="text-red-600 hover:text-red-800 transition-colors" title="Cancelar">
+                    ❌
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 transition-colors" title="Ver detalles">
+                    👁️
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Reserva 5 -->
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-4 px-6">
+                <div>
+                  <div class="font-medium text-gray-900">Laura Díaz</div>
+                  <div class="text-sm text-gray-500">laura.d@email.com</div>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-gray-700">15/01/2024</td>
+              <td class="py-4 px-6 text-gray-700">13:30</td>
+              <td class="py-4 px-6 text-gray-700">2 personas</td>
+              <td class="py-4 px-6 text-gray-700">+52 55 7777 6666</td>
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                  Cancelada
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex gap-2">
+                  <button class="text-gray-400 cursor-not-allowed" title="Editar" disabled>
+                    ✏️
+                  </button>
+                  <button class="text-gray-400 cursor-not-allowed" title="Cancelar" disabled>
+                    ❌
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 transition-colors" title="Ver detalles">
+                    👁️
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PAGINACIÓN -->
+    <div class="flex justify-between items-center mt-6">
+      <div class="text-sm text-gray-600">
+        Mostrando 1-5 de 12 reservas
+      </div>
+      <div class="flex gap-2">
+        <button class="px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
+          Anterior
+        </button>
+        <button class="px-4 py-2 bg-[#2c2c2c] text-white rounded-xl hover:bg-[#d4af37] transition-colors">
+          1
+        </button>
+        <button class="px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
+          2
+        </button>
+        <button class="px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Establecer fecha de hoy por defecto
+    document.getElementById('fechaFiltro').valueAsDate = new Date();
+    
+    function logout() {
+      if (confirm('¿Está seguro de que desea cerrar sesión?')) {
+        window.location.href = 'login.html';
+      }
+    }
+
+    // Funciones de ejemplo para los botones
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function() {
+        const action = this.title;
+        if (action && !this.disabled) {
+          // Simular acción (en un sistema real aquí iría la lógica)
+          console.log('Acción:', action);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

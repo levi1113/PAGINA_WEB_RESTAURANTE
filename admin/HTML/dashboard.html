@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Admin Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    .reserva-item {
+      transition: all 0.3s ease;
+    }
+    .reserva-item:hover {
+      background: rgba(212, 175, 55, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-black border-b border-[#d4af37] border-opacity-20">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <h1 class="text-xl text-[#d4af37] font-bold">PARRILLA 3 ELEMENTOS</h1>
+        <span class="text-gray-400 text-sm">Panel de Administración</span>
+      </div>
+      
+      <div class="flex items-center gap-6">
+        <div class="text-right">
+          <p class="text-white text-sm">Hoy: <span id="fechaActual" class="text-[#d4af37]"></span></p>
+          <p class="text-gray-400 text-xs" id="horaActual"></p>
+        </div>
+        <a href="../cliente/index.html" target="_blank" class="text-gray-400 hover:text-[#d4af37] transition-colors text-sm">
+          Ver Sitio Web
+        </a>
+        <button onclick="logout()" class="bg-[#d4af37] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#f5d67b] transition-colors">
+          Cerrar Sesión
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    
+    <!-- ESTADÍSTICAS RÁPIDAS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <!-- Total Reservas Hoy -->
+      <div class="stat-card rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm">Reservas Hoy</p>
+            <p class="text-3xl text-white font-light mt-2">12</p>
+          </div>
+          <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-green-400 text-sm mt-2">↑ 3 más que ayer</p>
+      </div>
+
+      <!-- Clientes Nuevos -->
+      <div class="stat-card rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm">Clientes Nuevos</p>
+            <p class="text-3xl text-white font-light mt-2">8</p>
+          </div>
+          <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-green-400 text-sm mt-2">↑ 40% este mes</p>
+      </div>
+
+      <!-- Ocupación -->
+      <div class="stat-card rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm">Ocupación Hoy</p>
+            <p class="text-3xl text-white font-light mt-2">78%</p>
+          </div>
+          <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-green-400 text-sm mt-2">↑ 12% vs promedio</p>
+      </div>
+
+      <!-- Ingreso Estimado -->
+      <div class="stat-card rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm">Ingreso Hoy</p>
+            <p class="text-3xl text-white font-light mt-2">$8,240</p>
+          </div>
+          <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-green-400 text-sm mt-2">↑ $1,200 vs ayer</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- RESERVAS DE HOY -->
+      <div class="lg:col-span-2">
+        <div class="stat-card rounded-2xl p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl text-white font-light">📅 Reservas de Hoy</h2>
+            <a href="reservas.html" class="text-[#d4af37] text-sm hover:underline">Ver todas</a>
+          </div>
+          
+          <div class="space-y-4 max-h-96 overflow-y-auto">
+            <!-- Reserva 1 -->
+            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">19:00</span>
+                    <span class="text-white font-medium">María González</span>
+                    <span class="text-gray-400 text-sm">4 personas</span>
+                  </div>
+                  <p class="text-gray-400 text-sm">Tel: +52 55 1234 5678 • Aniversario</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
+                    ✅ Confirmar
+                  </button>
+                  <button class="bg-red-600 text-white px-3 py-1 rounded text-xs hover:bg-red-700 transition-colors">
+                    ❌ Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reserva 2 -->
+            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">20:30</span>
+                    <span class="text-white font-medium">Carlos Rodríguez</span>
+                    <span class="text-gray-400 text-sm">2 personas</span>
+                  </div>
+                  <p class="text-gray-400 text-sm">Tel: +52 55 9876 5432 • ✅ Confirmada</p>
+                </div>
+                <button class="bg-blue-600 text-white px-3 py-1 rounded text-xs hover:bg-blue-700 transition-colors">
+                  📞 Llamar
+                </button>
+              </div>
+            </div>
+
+            <!-- Reserva 3 -->
+            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">21:00</span>
+                    <span class="text-white font-medium">Empresa Tech Solutions</span>
+                    <span class="text-gray-400 text-sm">8 personas</span>
+                  </div>
+                  <p class="text-gray-400 text-sm">Evento empresarial • Sala privada</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
+                    ✅ Confirmar
+                  </button>
+                  <button class="bg-gray-600 text-white px-3 py-1 rounded text-xs hover:bg-gray-700 transition-colors">
+                    📋 Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reserva 4 -->
+            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">14:00</span>
+                    <span class="text-white font-medium">Familia López</span>
+                    <span class="text-gray-400 text-sm">6 personas</span>
+                  </div>
+                  <p class="text-gray-400 text-sm">Cumpleaños • Menú infantil requerido</p>
+                </div>
+                <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
+                  ✅ Confirmar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO - ACCIONES RÁPIDAS -->
+      <div class="space-y-6">
+        <!-- ACCIONES RÁPIDAS -->
+        <div class="stat-card rounded-2xl p-6">
+          <h2 class="text-xl text-white font-light mb-4">🚀 Acciones Rápidas</h2>
+          <div class="space-y-3">
+            <a href="reservas.html" class="block w-full bg-[#d4af37] text-black text-center py-3 rounded-xl font-medium hover:bg-[#f5d67b] transition-colors">
+              Nueva Reserva Manual
+            </a>
+            <a href="clientes.html" class="block w-full bg-[#2c2c2c] text-white text-center py-3 rounded-xl font-medium hover:bg-[#3c3c3c] transition-colors border border-gray-700">
+              Ver Clientes
+            </a>
+            <a href="configuracion.html" class="block w-full bg-[#2c2c2c] text-white text-center py-3 rounded-xl font-medium hover:bg-[#3c3c3c] transition-colors border border-gray-700">
+              Configuración
+            </a>
+          </div>
+        </div>
+
+        <!-- ESTADO DEL RESTAURANTE -->
+        <div class="stat-card rounded-2xl p-6">
+          <h2 class="text-xl text-white font-light mb-4">🏪 Estado Actual</h2>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-400">Mesas Ocupadas</span>
+              <span class="text-white font-medium">12/16</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2">
+              <div class="bg-[#d4af37] h-2 rounded-full" style="width: 75%"></div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <span class="text-gray-400">Tiempo Espera</span>
+              <span class="text-green-400 font-medium">15 min</span>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <span class="text-gray-400">Staff Activo</span>
+              <span class="text-white font-medium">8 personas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOTIFICACIONES -->
+        <div class="stat-card rounded-2xl p-6">
+          <h2 class="text-xl text-white font-light mb-4">🔔 Notificaciones</h2>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 p-3 bg-yellow-500 bg-opacity-10 rounded-lg">
+              <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+              <div>
+                <p class="text-white text-sm">Reserva pendiente por confirmar</p>
+                <p class="text-gray-400 text-xs">María González - 19:00</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-green-500 bg-opacity-10 rounded-lg">
+              <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+              <div>
+                <p class="text-white text-sm">Nuevo cliente registrado</p>
+                <p class="text-gray-400 text-xs">Ana Martínez</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fecha y hora actual
+    function actualizarHora() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('fechaActual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+      document.getElementById('horaActual').textContent = ahora.toLocaleTimeString('es-ES');
+    }
+    
+    setInterval(actualizarHora, 1000);
+    actualizarHora();
+
+    // Logout
+    function logout() {
+      if (confirm('¿Está seguro de que desea cerrar sesión?')) {
+        window.location.href = 'login.html';
+      }
+    }
+
+    // Simular confirmación de reservas
+    document.querySelectorAll('button').forEach(button => {
+      if (button.textContent.includes('Confirmar')) {
+        button.addEventListener('click', function() {
+          const nombre = this.closest('.reserva-item').querySelector('.font-medium').textContent;
+          this.innerHTML = '✅ Confirmada';
+          this.className = 'bg-green-600 text-white px-3 py-1 rounded text-xs cursor-default';
+          alert(`Reserva de ${nombre} confirmada exitosamente`);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca de Nosotros - Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- NAVBAR -->
+  <header class="bg-black text-[#d4af37] sticky top-0 z-50 flex justify-between items-center px-16 py-6">
+    <div class="text-xl font-bold tracking-wider">PARRILLA 3 ELEMENTOS</div>
+    <nav>
+      <ul class="flex gap-8 list-none">
+        <li><a href="index.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Nosotros</a></li>
+        <li><a href="menu.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Menú</a></li>
+        <li><a href="reserva.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Reservar</a></li>
+        <li><a href="contacto.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Contacto</a></li>
+        <li><a href="ia.html" class="text-[#d4af37] font-medium border-b-2 border-[#d4af37]">IA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-96 flex items-center justify-center bg-cover bg-center bg-fixed" style="background-image: url('../images/nosotros.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 text-center">
+      <h1 class="text-6xl text-[#d4af37] mb-4 font-bold">NUESTRA HISTORIA</h1>
+      <p class="text-xl text-white max-w-2xl mx-auto">Más de una década creando experiencias gastronómicas inolvidables</p>
+    </div>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section class="py-20 px-8 bg-[#111]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl text-[#d4af37] mb-6">Una Pasión que Trasciende</h2>
+          <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+            Fundado en 2012, <span class="text-[#d4af37] font-semibold">Parrilla 3 Elementos</span> nació del sueño de tres amigos apasionados por la gastronomía: un chef, un sommelier y un experto en carnes. Juntos, fusionaron sus conocimientos para crear un concepto único donde la tierra, el mar y el cielo se encuentran en perfecta armonía.
+          </p>
+          <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+            Lo que comenzó como un pequeño local familiar hoy es reconocido como uno de los restaurantes más exclusivos de la ciudad, manteniendo siempre nuestra esencia: ingredientes de la más alta calidad y un servicio impecable.
+          </p>
+          <div class="flex gap-6 mt-8">
+            <div class="text-center">
+              <div class="text-3xl text-[#d4af37] font-bold">12+</div>
+              <div class="text-gray-400">Años de Experiencia</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl text-[#d4af37] font-bold">50k+</div>
+              <div class="text-gray-400">Clientes Satisfechos</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl text-[#d4af37] font-bold">15</div>
+              <div class="text-gray-400">Premios Gastronómicos</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="../images/historia-restaurante.jpg" alt="Historia del restaurante" class="rounded-2xl shadow-2xl">
+          <div class="absolute -bottom-6 -left-6 bg-[#d4af37] text-black p-6 rounded-2xl shadow-2xl">
+            <div class="text-2xl font-bold">2012</div>
+            <div class="text-sm">Año de Fundación</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO FUNDADOR -->
+  <section class="py-20 bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto px-8">
+      <h2 class="text-4xl text-[#d4af37] text-center mb-4">El Equipo Fundador</h2>
+      <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">Tres mentes creativas, una misma pasión: revolucionar la experiencia gastronómica</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Chef Ejecutivo -->
+        <div class="bg-white bg-opacity-5 rounded-2xl p-8 text-center backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300 hover:-translate-y-2">
+          <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#d4af37]">
+            <img src="../images/chef-ejecutivo.jpg" alt="Chef Ejecutivo" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl text-[#d4af37] mb-2">Carlos Mendoza</h3>
+          <p class="text-gray-400 mb-4 font-semibold">Chef Ejecutivo</p>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Formado en las mejores escuelas de Europa, Carlos trae 20 años de experiencia fusionando técnicas tradicionales con innovación contemporánea.
+          </p>
+          <div class="mt-4 text-[#d4af37] text-sm">
+            ★ Especialista en Parrilla y Técnicas de Maduración
+          </div>
+        </div>
+
+        <!-- Sommelier -->
+        <div class="bg-white bg-opacity-5 rounded-2xl p-8 text-center backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300 hover:-translate-y-2">
+          <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#d4af37]">
+            <img src="../images/sommelier.jpg" alt="Sommelier" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl text-[#d4af37] mb-2">Ana Rodríguez</h3>
+          <p class="text-gray-400 mb-4 font-semibold">Sommelier & Directora de Experiencia</p>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Certificada por la Court of Master Sommeliers, Ana crea maridajes perfectos que elevan cada platillo a una experiencia sensorial única.
+          </p>
+          <div class="mt-4 text-[#d4af37] text-sm">
+            ★ Más de 200 etiquetas en nuestra bodega
+          </div>
+        </div>
+
+        <!-- Experto en Carnes -->
+        <div class="bg-white bg-opacity-5 rounded-2xl p-8 text-center backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300 hover:-translate-y-2">
+          <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#d4af37]">
+            <img src="../images/experto-carnes.jpg" alt="Experto en Carnes" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl text-[#d4af37] mb-2">Roberto Silva</h3>
+          <p class="text-gray-400 mb-4 font-semibold">Experto en Carnes Premium</p>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Tercera generación de ganaderos, Roberto selecciona personalmente cada corte de nuestras granjas asociadas, garantizando calidad suprema.
+          </p>
+          <div class="mt-4 text-[#d4af37] text-sm">
+            ★ Proveedor exclusivo de carnes 180 días maduradas
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFÍA DE SERVICIO -->
+  <section class="py-20 bg-[#111]">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <img src="../images/filosofia-servicio.jpg" alt="Filosofía de servicio" class="rounded-2xl shadow-2xl">
+          <div class="absolute -top-6 -right-6 bg-[#d4af37] text-black p-6 rounded-2xl shadow-2xl">
+            <div class="text-2xl font-bold">100%</div>
+            <div class="text-sm">Satisfacción Garantizada</div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-4xl text-[#d4af37] mb-6">Nuestra Filosofía</h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="bg-[#d4af37] text-black p-3 rounded-full mt-1">
+                <span class="text-xl">🎯</span>
+              </div>
+              <div>
+                <h3 class="text-xl text-white mb-2">Excelencia en Cada Detalle</h3>
+                <p class="text-gray-300">Desde la selección de ingredientes hasta la presentación final, cada elemento es cuidadosamente considerado.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-[#d4af37] text-black p-3 rounded-full mt-1">
+                <span class="text-xl">🌱</span>
+              </div>
+              <div>
+                <h3 class="text-xl text-white mb-2">Sostenibilidad y Origen</h3>
+                <p class="text-gray-300">Trabajamos exclusivamente con proveedores locales y prácticas sostenibles que respetan el medio ambiente.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-[#d4af37] text-black p-3 rounded-full mt-1">
+                <span class="text-xl">💫</span>
+              </div>
+              <div>
+                <h3 class="text-xl text-white mb-2">Innovación Constante</h3>
+                <p class="text-gray-300">Nos mantenemos a la vanguardia de las tendencias gastronómicas mientras honramos las técnicas tradicionales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIOS Y RECONOCIMIENTOS -->
+  <section class="py-20 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]">
+    <div class="max-w-6xl mx-auto px-8 text-center">
+      <h2 class="text-4xl text-[#d4af37] mb-4">Premios y Reconocimientos</h2>
+      <p class="text-xl text-gray-400 mb-16">El esfuerzo y la dedicación tienen su recompensa</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="bg-white bg-opacity-5 p-8 rounded-2xl backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300">
+          <div class="text-4xl mb-4">🏆</div>
+          <h3 class="text-lg text-[#d4af37] font-semibold">Mejor Restaurante 2023</h3>
+          <p class="text-gray-400 text-sm">Premios Gastronomía Nacional</p>
+        </div>
+        <div class="bg-white bg-opacity-5 p-8 rounded-2xl backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300">
+          <div class="text-4xl mb-4">⭐</div>
+          <h3 class="text-lg text-[#d4af37] font-semibold">5 Estrellas TripAdvisor</h3>
+          <p class="text-gray-400 text-sm">Certificación de Excelencia</p>
+        </div>
+        <div class="bg-white bg-opacity-5 p-8 rounded-2xl backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300">
+          <div class="text-4xl mb-4">🍷</div>
+          <h3 class="text-lg text-[#d4af37] font-semibold">Mejor Carta de Vinos</h3>
+          <p class="text-gray-400 text-sm">Wine Spectator Award</p>
+        </div>
+        <div class="bg-white bg-opacity-5 p-8 rounded-2xl backdrop-blur-sm border border-[#d4af37] border-opacity-20 hover:border-opacity-100 transition-all duration-300">
+          <div class="text-4xl mb-4">👨‍🍳</div>
+          <h3 class="text-lg text-[#d4af37] font-semibold">Chef del Año</h3>
+          <p class="text-gray-400 text-sm">Asociación Culinaria Mexicana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 bg-[#111] text-center">
+    <div class="max-w-4xl mx-auto px-8">
+      <h2 class="text-4xl text-[#d4af37] mb-6">Ven y Vive la Experiencia</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        Descubre por qué somos más que un restaurante. Somos el destino gastronómico donde cada visita se convierte en un recuerdo inolvidable.
+      </p>
+      <div class="flex gap-6 justify-center flex-wrap">
+        <a href="reserva.html" class="bg-[#d4af37] text-black font-bold py-4 px-8 rounded-full transition-all hover:bg-transparent hover:text-[#d4af37] hover:border-2 hover:border-[#d4af37]">
+          RESERVAR MESA
+        </a>
+        <a href="contacto.html" class="border-2 border-[#d4af37] text-[#d4af37] font-bold py-4 px-8 rounded-full transition-all hover:bg-[#d4af37] hover:text-black">
+          CONTÁCTANOS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-[#777] py-12">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg mb-4">PARRILLA 3 ELEMENTOS</h3>
+          <p class="text-sm">Donde la tierra, el mar y el cielo se encuentran en perfecta armonía gastronómica.</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">CONTACTO</h4>
+          <p class="text-sm">Av. Gourmet 123, Ciudad</p>
+          <p class="text-sm">reservaciones@parrilla3elementos.com</p>
+          <p class="text-sm">+52 55 1234 5678</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">HORARIOS</h4>
+          <p class="text-sm">Lun-Vie: 1:00 PM - 11:00 PM</p>
+          <p class="text-sm">Sáb-Dom: 12:00 PM - 12:00 AM</p>
+        </div>
+        <div>
+          <h4 class="text-white mb-4">SÍGUENOS</h4>
+          <div class="flex gap-4">
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors">Instagram</a>
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors">Facebook</a>
+            <a href="#" class="text-[#d4af37] hover:text-white transition-colors">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>&copy; 2025 Parrilla 3 Elementos. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

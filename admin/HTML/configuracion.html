@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuración - Admin Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-black border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-8">
+          <h1 class="text-xl text-[#d4af37] font-bold">PARRILLA 3 ELEMENTOS</h1>
+          <nav class="hidden md:flex gap-6">
+            <a href="dashboard.html" class="text-gray-400 hover:text-white transition-colors">Dashboard</a>
+            <a href="reservas.html" class="text-gray-400 hover:text-white transition-colors">Reservas</a>
+            <a href="clientes.html" class="text-gray-400 hover:text-white transition-colors">Clientes</a>
+            <a href="configuracion.html" class="text-white border-b-2 border-[#d4af37]">Configuración</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-gray-400 text-sm">admin@parrilla3elementos.com</span>
+          <a href="login.html" class="bg-[#d4af37] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#f5d67b] transition-colors">
+            Cerrar Sesión
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 py-8">
+    <div class="mb-8">
+      <h1 class="text-3xl text-white font-light mb-2">Configuración del Restaurante</h1>
+      <p class="text-gray-400">Gestione la información y preferencias de su establecimiento</p>
+    </div>
+
+    <!-- INFORMACIÓN BÁSICA -->
+    <div class="bg-[#111] rounded-2xl p-8 mb-8 border border-gray-800">
+      <h2 class="text-xl text-white font-medium mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+        </svg>
+        Información Básica
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Nombre del Restaurante</label>
+          <input type="text" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="Parrilla 3 Elementos">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Teléfono Principal</label>
+          <input type="tel" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="+52 55 1234 5678">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Email de Contacto</label>
+          <input type="email" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="contacto@parrilla3elementos.com">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Sitio Web</label>
+          <input type="url" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="https://parrilla3elementos.com">
+        </div>
+
+        <div class="md:col-span-2 space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Dirección</label>
+          <input type="text" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="Av. Gourmet 123, Colonia Elegante, CDMX">
+        </div>
+      </div>
+    </div>
+
+    <!-- HORARIOS -->
+    <div class="bg-[#111] rounded-2xl p-8 mb-8 border border-gray-800">
+      <h2 class="text-xl text-white font-medium mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        Horarios de Operación
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-center justify-between py-3 border-b border-gray-800">
+          <span class="text-gray-300">Lunes - Jueves</span>
+          <input type="text" class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-3 py-2 text-white text-center focus:outline-none focus:border-[#d4af37] transition-colors w-32" value="13:00 - 22:00">
+        </div>
+        
+        <div class="flex items-center justify-between py-3 border-b border-gray-800">
+          <span class="text-gray-300">Viernes</span>
+          <input type="text" class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-3 py-2 text-white text-center focus:outline-none focus:border-[#d4af37] transition-colors w-32" value="13:00 - 23:00">
+        </div>
+        
+        <div class="flex items-center justify-between py-3 border-b border-gray-800">
+          <span class="text-gray-300">Sábado</span>
+          <input type="text" class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-3 py-2 text-white text-center focus:outline-none focus:border-[#d4af37] transition-colors w-32" value="12:00 - 23:00">
+        </div>
+        
+        <div class="flex items-center justify-between py-3">
+          <span class="text-gray-300">Domingo</span>
+          <input type="text" class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-3 py-2 text-white text-center focus:outline-none focus:border-[#d4af37] transition-colors w-32" value="12:00 - 21:00">
+        </div>
+      </div>
+    </div>
+
+    <!-- CONFIGURACIÓN DE RESERVAS -->
+    <div class="bg-[#111] rounded-2xl p-8 mb-8 border border-gray-800">
+      <h2 class="text-xl text-white font-medium mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        Configuración de Reservas
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Tiempo Máximo de Reserva (horas)</label>
+          <input type="number" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="2" min="1" max="4">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Anticipación Mínima (horas)</label>
+          <input type="number" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="2" min="1" max="24">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Capacidad Máxima por Reserva</label>
+          <input type="number" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="12" min="1" max="50">
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Depósito Requerido (%)</label>
+          <input type="number" class="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" value="0" min="0" max="50">
+        </div>
+      </div>
+
+      <div class="mt-6 space-y-4">
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="rounded border-gray-600 text-[#d4af37] focus:ring-[#d4af37]" checked>
+          <span class="text-gray-300">Requerir confirmación para reservas grandes</span>
+        </label>
+        
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="rounded border-gray-600 text-[#d4af37] focus:ring-[#d4af37]" checked>
+          <span class="text-gray-300">Enviar recordatorio 24 horas antes</span>
+        </label>
+        
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="rounded border-gray-600 text-[#d4af37] focus:ring-[#d4af37]">
+          <span class="text-gray-300">Permitir reservas online</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- CONFIGURACIÓN DE NOTIFICACIONES -->
+    <div class="bg-[#111] rounded-2xl p-8 mb-8 border border-gray-800">
+      <h2 class="text-xl text-white font-medium mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+        </svg>
+        Notificaciones
+      </h2>
+      
+      <div class="space-y-4">
+        <label class="flex items-center justify-between py-3">
+          <span class="text-gray-300">Notificaciones por Email</span>
+          <input type="checkbox" class="rounded border-gray-600 text-[#d4af37] focus:ring-[#d4af37]" checked>
+        </label>
+        
+        <label class="flex items-center justify-between py-3 border-b border-gray-800">
+          <span class="text-gray-300">Notificaciones por SMS</span>
+          <input type="checkbox" class="rounded border-gray-600 text-[#d4af37] focus:ring-[#d4af37]">
+        </label>
+        
+        <label class="flex items-center justify-between py-3">
+          <span class="text-gray-300">Email para Notificaciones</span>
+          <input type="email" class="bg-[#1a1a1a] border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#d4af37] transition-colors w-64" value="notificaciones@parrilla3elementos.com">
+        </label>
+      </div>
+    </div>
+
+    <!-- BOTONES DE ACCIÓN -->
+    <div class="flex gap-4 justify-end">
+      <button class="border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:border-gray-400 hover:text-white transition-colors">
+        Cancelar
+      </button>
+      <button class="bg-[#d4af37] text-black px-6 py-3 rounded-xl font-medium hover:bg-[#f5d67b] transition-colors">
+        Guardar Cambios
+      </button>
+    </div>
+  </main>
+
+</body>
+</html>

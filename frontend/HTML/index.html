@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Estilos personalizados para el slider */
+    .slide { opacity: 0; transition: opacity 1s ease-in-out; }
+    .slide.active { opacity: 1; }
+    .dish-card:hover .dish-image img { transform: scale(1.05); }
+    
+    /* Estilo personalizado para el fondo del menú */
+    .menu-with-bg-custom {
+      background-image: url('../images/fondo-menu.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- NAVBAR -->
+  <header class="bg-black text-[#d4af37] sticky top-0 z-50 flex justify-between items-center px-16 py-6">
+    <div class="text-xl font-bold tracking-wider">PARRILLA 3 ELEMENTOS</div>
+    <nav>
+      <ul class="flex gap-8 list-none">
+        <li><a href="index.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Inicio</a></li>
+        <li><a href="nosotros.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Nosotros</a></li>
+        <li><a href="menu.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Menú</a></li>
+        <li><a href="reserva.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Reservar</a></li>
+        <li><a href="contacto.html" class="text-white font-medium hover:text-[#d4af37] transition-colors">Contacto</a></li>
+        <li><a href="ia.html" class="text-[#d4af37] font-medium border-b-2 border-[#d4af37]">IA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- HERO SLIDER -->
+  <section class="hero-slider relative h-screen w-full overflow-hidden">
+    <div class="slides relative w-full h-full">
+      <!-- Slide 1 -->
+      <div class="slide active absolute inset-0 flex items-center justify-center text-center text-white" style="background-image: url('../images/Slider1.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-55"></div>
+        <div class="relative z-10 max-w-4xl px-8">
+          <h1 class="text-5xl text-[#d4af37] mb-4 drop-shadow-2xl">UNA EXPERIENCIA GASTRONÓMICA DE ALTO NIVEL</h1>
+          <p class="text-xl mb-8 drop-shadow-lg">Carnes selectas, mariscos frescos y sabores que conquistan el paladar.</p>
+          <a href="menu.html" class="btn border-2 border-[#d4af37] text-[#d4af37] font-bold py-3 px-8 transition-all hover:bg-[#d4af37] hover:text-black">VER MENÚ</a>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slide absolute inset-0 flex items-center justify-center text-center text-white" style="background-image: url('../images/Slider2.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-55"></div>
+        <div class="relative z-10 max-w-4xl px-8">
+          <h1 class="text-5xl text-[#d4af37] mb-4 drop-shadow-2xl">LOS MEJORES CORTES PREMIUM</h1>
+          <p class="text-xl mb-8 drop-shadow-lg">Carnes maduradas y cortes selectos directamente a tu mesa.</p>
+          <a href="reserva.html" class="btn border-2 border-[#d4af37] text-[#d4af37] font-bold py-3 px-8 transition-all hover:bg-[#d4af37] hover:text-black">RESERVAR AHORA</a>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="slide absolute inset-0 flex items-center justify-center text-center text-white" style="background-image: url('../images/Slider3.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-55"></div>
+        <div class="relative z-10 max-w-4xl px-8">
+          <h1 class="text-5xl text-[#d4af37] mb-4 drop-shadow-2xl">MARISCOS DE ALTURA</h1>
+          <p class="text-xl mb-8 drop-shadow-lg">Frescura y sabor del mar en cada uno de nuestros platillos.</p>
+          <a href="menu.html" class="btn border-2 border-[#d4af37] text-[#d4af37] font-bold py-3 px-8 transition-all hover:bg-[#d4af37] hover:text-black">CONOCER MÁS</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Indicadores del slider -->
+    <div class="slider-indicators absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4 z-30">
+      <span class="indicator active w-4 h-4 bg-white bg-opacity-50 rounded-full cursor-pointer transition-all hover:bg-[#f5d67b] hover:scale-110" data-slide="0"></span>
+      <span class="indicator w-4 h-4 bg-white bg-opacity-50 rounded-full cursor-pointer transition-all hover:bg-[#f5d67b] hover:scale-110" data-slide="1"></span>
+      <span class="indicator w-4 h-4 bg-white bg-opacity-50 rounded-full cursor-pointer transition-all hover:bg-[#f5d67b] hover:scale-110" data-slide="2"></span>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="about bg-[#111] py-20 px-[8%] flex flex-wrap items-center justify-center">
+    <div class="text flex-1 min-w-[45%] p-8">
+      <h2 class="text-3xl text-[#d4af37] mb-4">NUESTRA ESENCIA</h2>
+      <p class="text-[#ccc] text-lg leading-loose">
+        En <strong class="font-bold">Parrilla 3 Elementos</strong> reunimos lo mejor de tres mundos:  
+        el sabor intenso de las carnes premium, la frescura del mar y la elegancia de la cocina moderna.
+        Cada platillo es una obra creada con pasión, precisión y respeto por los ingredientes.
+      </p>
+    </div>
+    <div class="image flex-1 min-w-[45%] text-center">
+      <img src="../images/QSOMOS.jpg" alt="Imagen del restaurante" class="w-[90%] rounded-xl shadow-2xl">
+    </div>
+  </section>
+
+  <!-- FILOSOFÍA CULINARIA -->
+  <section class="about bg-[#111] py-20 px-[8%] flex flex-wrap items-center justify-center">
+    <div class="image flex-1 min-w-[45%] text-center">
+      <img src="../images/filosofia.jpg" alt="Nuestra filosofía culinaria" class="w-[90%] rounded-xl shadow-2xl">
+    </div>
+    <div class="text flex-1 min-w-[45%] p-8">
+      <h2 class="text-3xl text-[#d4af37] mb-4">FILOSOFÍA CULINARIA</h2>
+      <p class="text-[#ccc] text-lg leading-loose">
+        En <strong class="font-bold">Parrilla 3 Elementos</strong> creemos que la excelencia gastronómica nace de la armonía 
+        entre tradición e innovación. Cada ingrediente es seleccionado meticulosamente, 
+        cada técnica perfeccionada con esmero, y cada platillo cuenta una historia de dedicación 
+        y amor por la cocina de alto nivel.
+      </p>
+    </div>
+  </section>
+
+  <!-- MENÚ DESTACADO CON FONDO (VERSIÓN CORREGIDA) -->
+  <section class="relative py-20 px-[8%] min-h-screen flex items-center justify-center" 
+         style="background-image: url('../images/fondomenu.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="menu-bg-overlay absolute inset-0 bg-black bg-opacity-70"></div>
+    <div class="menu-content relative z-10 w-full max-w-7xl text-center">
+      <div class="menu-header">
+        <h2 class="text-4xl text-[#d4af37] mb-4 drop-shadow-2xl">MENÚ DESTACADO</h2>
+        <p class="menu-subtitle text-white text-xl mb-12 drop-shadow-lg">Los favoritos de nuestros comensales</p>
+      </div>
+      
+      <div class="menu-items-light flex justify-center gap-10 mb-12 flex-wrap">
+        <div class="dish-card bg-white bg-opacity-95 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 w-[350px] backdrop-blur-sm hover:-translate-y-3">
+          <div class="dish-image relative h-64 overflow-hidden">
+            <img src="../images/trilogiadelmar.jpg" alt="Trilogía del Mar" class="w-full h-full object-cover transition-transform duration-300">
+            <div class="dish-overlay absolute top-4 right-4 bg-[#d4af37] text-white py-2 px-4 rounded-full font-bold">
+              <span class="price">$420</span>
+            </div>
+          </div>
+          <div class="dish-content p-8 text-left">
+            <h3 class="text-[#2c2c2c] text-xl font-semibold mb-4">Trilogía del Mar</h3>
+            <p class="text-gray-600 mb-6">Camarones, callo de hacha y pulpo a la parrilla con mantequilla de ajo y hierbas finas.</p>
+            <div class="dish-tags flex gap-2">
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Mariscos</span>
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Gourmet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card bg-white bg-opacity-95 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 w-[350px] backdrop-blur-sm hover:-translate-y-3">
+          <div class="dish-image relative h-64 overflow-hidden">
+            <img src="../images/Rib Eye Prime.jpg" alt="Rib Eye Prime" class="w-full h-full object-cover transition-transform duration-300">
+            <div class="dish-overlay absolute top-4 right-4 bg-[#d4af37] text-white py-2 px-4 rounded-full font-bold">
+              <span class="price">$580</span>
+            </div>
+          </div>
+          <div class="dish-content p-8 text-left">
+            <h3 class="text-[#2c2c2c] text-xl font-semibold mb-4">Rib Eye Prime</h3>
+            <p class="text-gray-600 mb-6">Corte americano 180 días madurado, acompañado de vegetales asados y reducción de vino tinto.</p>
+            <div class="dish-tags flex gap-2">
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Carnes</span>
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card bg-white bg-opacity-95 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 w-[350px] backdrop-blur-sm hover:-translate-y-3">
+          <div class="dish-image relative h-64 overflow-hidden">
+            <img src="../images/pastelcho.jpg" alt="Postre gourmet" class="w-full h-full object-cover transition-transform duration-300">
+            <div class="dish-overlay absolute top-4 right-4 bg-[#d4af37] text-white py-2 px-4 rounded-full font-bold">
+              <span class="price">$220</span>
+            </div>
+          </div>
+          <div class="dish-content p-8 text-left">
+            <h3 class="text-[#2c2c2c] text-xl font-semibold mb-4">Dulce Final</h3>
+            <p class="text-gray-600 mb-6">Fondant de chocolate belga 70% con helado artesanal de vainilla bourbon y frutos rojos.</p>
+            <div class="dish-tags flex gap-2">
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Postres</span>
+              <span class="tag bg-[#f8f5f0] text-[#8b7355] py-1 px-3 rounded-full text-sm font-medium border border-[#e8e0d0]">Gourmet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta mt-8">
+        <a href="menu.html" class="btn-gold bg-[#d4af37] text-white py-4 px-10 rounded-full font-bold text-lg transition-all duration-300 border-2 border-[#d4af37] hover:bg-transparent hover:text-[#d4af37] hover:-translate-y-1">VER MENÚ COMPLETO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIAS EXCLUSIVAS -->
+  <section class="experiencias bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] py-20 px-[8%] text-center text-white">
+    <div class="experiencias-header">
+      <h2 class="text-4xl text-[#d4af37] mb-4">EXPERIENCIAS EXCLUSIVAS</h2>
+      <p class="experiencias-subtitle text-[#ccc] text-xl mb-12">Vive momentos únicos diseñados para los paladares más exigentes</p>
+    </div>
+    <div class="experiencias-grid flex justify-center gap-8 flex-wrap">
+      <div class="experiencia-card bg-white bg-opacity-5 backdrop-blur-sm border border-[#d4af37] border-opacity-20 py-10 px-8 rounded-2xl w-80 transition-all duration-300 hover:-translate-y-3 hover:border-[#d4af37] hover:shadow-2xl hover:shadow-[#d4af37]/10">
+        <div class="experiencia-icon text-5xl mb-6"></div>
+        <h3 class="text-[#d4af37] text-xl mb-4">Cena con Maridaje</h3>
+        <p class="text-[#ccc] mb-6 leading-relaxed">Menú degustación de 5 tiempos con selección de vinos premium y atención personalizada.</p>
+        <span class="experiencia-tag bg-[#d4af37] bg-opacity-20 text-[#d4af37] py-2 px-4 rounded-full text-sm font-medium border border-[#d4af37] border-opacity-30">Reserva anticipada</span>
+      </div>
+      <div class="experiencia-card bg-white bg-opacity-5 backdrop-blur-sm border border-[#d4af37] border-opacity-20 py-10 px-8 rounded-2xl w-80 transition-all duration-300 hover:-translate-y-3 hover:border-[#d4af37] hover:shadow-2xl hover:shadow-[#d4af37]/10">
+        <div class="experiencia-icon text-5xl mb-6"></div>
+        <h3 class="text-[#d4af37] text-xl mb-4">Chef's Table</h3>
+        <p class="text-[#ccc] mb-6 leading-relaxed">Ubicación privilegiada frente a cocina abierta con interacción directa con nuestro chef ejecutivo.</p>
+        <span class="experiencia-tag bg-[#d4af37] bg-opacity-20 text-[#d4af37] py-2 px-4 rounded-full text-sm font-medium border border-[#d4af37] border-opacity-30">Solo 6 personas</span>
+      </div>
+      <div class="experiencia-card bg-white bg-opacity-5 backdrop-blur-sm border border-[#d4af37] border-opacity-20 py-10 px-8 rounded-2xl w-80 transition-all duration-300 hover:-translate-y-3 hover:border-[#d4af37] hover:shadow-2xl hover:shadow-[#d4af37]/10">
+        <div class="experiencia-icon text-5xl mb-6"></div>
+        <h3 class="text-[#d4af37] text-xl mb-4">Eventos Privados</h3>
+        <p class="text-[#ccc] mb-6 leading-relaxed">Celebraciones especiales con menú personalizado y ambiente exclusivo para tus momentos importantes.</p>
+        <span class="experiencia-tag bg-[#d4af37] bg-opacity-20 text-[#d4af37] py-2 px-4 rounded-full text-sm font-medium border border-[#d4af37] border-opacity-30">Hasta 40 personas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVA -->
+  <section class="reserva bg-[#111] py-20 px-8 text-center">
+    <h2 class="text-3xl text-[#d4af37] mb-4">RESERVA TU EXPERIENCIA</h2>
+    <p class="text-[#ccc] text-xl mb-8">Déjate llevar por un viaje de sabores inolvidables. Reserva tu mesa ahora.</p>
+    <a href="reserva.html" class="btn-dark bg-[#d4af37] text-black font-bold py-3 px-8 rounded transition-colors hover:bg-[#f5d67b]">RESERVAR AHORA</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-[#777] text-center py-6">
+    <p>&copy; 2025 Parrilla 3 Elementos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // JavaScript del slider (el mismo que tenías)
+    class HeroSlider {
+      constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.currentSlide = 0;
+        this.slideInterval = null;
+        this.slideDuration = 5000;
+
+        this.init();
+      }
+
+      init() {
+        this.startAutoSlide();
+        
+        this.indicators.forEach(indicator => {
+          indicator.addEventListener('click', (e) => {
+            const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+            this.goToSlide(slideIndex);
+            this.restartAutoSlide();
+          });
+        });
+
+        const slider = document.querySelector('.hero-slider');
+        slider.addEventListener('mouseenter', () => this.stopAutoSlide());
+        slider.addEventListener('mouseleave', () => this.startAutoSlide());
+      }
+
+      goToSlide(slideIndex) {
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        this.slides[slideIndex].classList.add('active');
+        this.indicators[slideIndex].classList.add('active');
+        
+        this.currentSlide = slideIndex;
+      }
+
+      nextSlide() {
+        const next = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(next);
+      }
+
+      startAutoSlide() {
+        this.stopAutoSlide();
+        this.slideInterval = setInterval(() => {
+          this.nextSlide();
+        }, this.slideDuration);
+      }
+
+      stopAutoSlide() {
+        if (this.slideInterval) {
+          clearInterval(this.slideInterval);
+          this.slideInterval = null;
+        }
+      }
+
+      restartAutoSlide() {
+        this.stopAutoSlide();
+        this.startAutoSlide();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new HeroSlider();
+    });
+  </script>
+</body>
+</html>

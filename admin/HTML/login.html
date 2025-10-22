@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Parrilla 3 Elementos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center">
+
+  <!-- LOGIN ADMIN -->
+  <section class="w-full max-w-md mx-4">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl text-[#d4af37] font-light mb-4">PARRILLA 3 ELEMENTOS</h1>
+      <div class="w-16 h-1 bg-[#d4af37] mx-auto mb-4"></div>
+      <p class="text-gray-400">Panel de Administración</p>
+    </div>
+
+    <div class="bg-[#111] rounded-2xl p-8 border border-[#d4af37] border-opacity-20">
+      <form id="loginForm" class="space-y-6">
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Usuario</label>
+          <input 
+            type="text" 
+            class="w-full bg-[#1a1a1a] border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#d4af37] transition-colors" 
+            placeholder="Ingrese su usuario"
+            required
+          >
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-gray-300 text-sm font-medium">Contraseña</label>
+          <input 
+            type="password" 
+            class="w-full bg-[#1a1a1a] border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#d4af37] transition-colors" 
+            placeholder="Ingrese su contraseña"
+            required
+          >
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full bg-[#d4af37] text-[#0a0a0a] font-medium py-3 rounded-xl transition-all hover:bg-[#f5d67b]"
+        >
+          Acceder al Panel
+        </button>
+      </form>
+
+      <div class="mt-6 p-4 bg-[#1a1a1a] rounded-xl border border-gray-700">
+        <p class="text-gray-400 text-sm text-center">
+          <strong>Credenciales de prueba:</strong><br>
+          Usuario: <span class="text-[#d4af37]">admin</span><br>
+          Contraseña: <span class="text-[#d4af37]">123456</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const usuario = this.querySelector('input[type="text"]').value;
+      const password = this.querySelector('input[type="password"]').value;
+      
+      // Credenciales de prueba
+      if (usuario === 'admin' && password === '123456') {
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Credenciales incorrectas. Use: admin / 123456');
+      }
+    });
+  </script>
+
+</body>
+</html>
