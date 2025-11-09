@@ -5,6 +5,9 @@ import express from 'express';
 import cors from 'cors';
 // (dotenv se carga automáticamente gracias al script de package.json)
 
+// Importa el pool de la base de datos.
+import pool from './utils/db.js';
+
 // Importación de nuestras rutas
 import iaRoutes from './routes/ia.routes.js';
 import adminRoutes from './routes/admin.routes.js';

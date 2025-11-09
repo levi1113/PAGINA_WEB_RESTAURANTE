@@ -64,17 +64,43 @@
   </section>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      const usuario = this.querySelector('input[type="text"]').value;
+      const username = this.querySelector('input[type="text"]').value;
       const password = this.querySelector('input[type="password"]').value;
-      
-      // Credenciales de prueba
-      if (usuario === 'admin' && password === '123456') {
+
+      // Borramos el div de credenciales de prueba si existe
+      const demoBox = document.querySelector('.mt-6');
+      if (demoBox) demoBox.style.display = 'none';
+
+      try {
+        // 1. Llamar a nuestro backend
+        const response = await fetch('http://localhost:3000/api/admin/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+
+        // 2. Si el backend nos da un error (ej. 401 Credenciales incorrectas)
+        if (!response.ok) {
+          throw new Error(data.error || 'Error al iniciar sesión');
+        }
+
+        // 3. ¡Éxito! Guardar el "gafete" (token) en el navegador
+        // Usamos localStorage para que el token persista
+        localStorage.setItem('adminToken', data.token);
+
+        // 4. Redirigir al dashboard
         window.location.href = 'dashboard.html';
-      } else {
-        alert('Credenciales incorrectas. Use: admin / 123456');
+
+      } catch (error) {
+        // 5. Mostrar el error al usuario
+        alert(error.message);
       }
     });
   </script>

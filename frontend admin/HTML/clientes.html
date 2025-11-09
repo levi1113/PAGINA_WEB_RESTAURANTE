@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clientes - Admin Parrilla 3 Elementos</title>
+  <script src="../JS/auth.js"></script> <!-- SCRIPT GUARDIAN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
@@ -99,169 +100,9 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-800">
-            <!-- Cliente 1 -->
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="py-4 px-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center text-black font-bold">
-                    MG
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">María González</div>
-                    <div class="text-gray-400 text-sm">Cliente Premium</div>
-                  </div>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">maria.gonzalez@email.com</div>
-                <div class="text-gray-400 text-sm">+52 55 1234 5678</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-white font-medium">12</span>
-                <span class="text-gray-400 text-sm"> veces</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">15 Ene 2024</div>
-                <div class="text-gray-400 text-sm">19:30</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-[#d4af37] font-medium">$1,240</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Carnes</span>
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Vino Tinto</span>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <button class="text-[#d4af37] hover:text-[#f5d67b] transition-colors text-sm font-medium">
-                  Ver Detalles
-                </button>
-              </td>
-            </tr>
 
-            <!-- Cliente 2 -->
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="py-4 px-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center text-gray-400 font-bold">
-                    CR
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Carlos Rodríguez</div>
-                    <div class="text-gray-400 text-sm">Cliente Regular</div>
-                  </div>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">carlos.rodriguez@email.com</div>
-                <div class="text-gray-400 text-sm">+52 55 9876 5432</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-white font-medium">8</span>
-                <span class="text-gray-400 text-sm"> veces</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">12 Ene 2024</div>
-                <div class="text-gray-400 text-sm">20:15</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-[#d4af37] font-medium">$890</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Mariscos</span>
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Cerveza</span>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <button class="text-[#d4af37] hover:text-[#f5d67b] transition-colors text-sm font-medium">
-                  Ver Detalles
-                </button>
-              </td>
-            </tr>
+            <td colspan="7" class="text-center py-8 text-gray-400">Cargando clientes...</td>    
 
-            <!-- Cliente 3 -->
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="py-4 px-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center text-gray-400 font-bold">
-                    AM
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Ana Martínez</div>
-                    <div class="text-gray-400 text-sm">Nuevo Cliente</div>
-                  </div>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">ana.martinez@email.com</div>
-                <div class="text-gray-400 text-sm">+52 55 5555 1234</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-white font-medium">3</span>
-                <span class="text-gray-400 text-sm"> veces</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">10 Ene 2024</div>
-                <div class="text-gray-400 text-sm">14:00</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-[#d4af37] font-medium">$1,150</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Postres</span>
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Vino Blanco</span>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <button class="text-[#d4af37] hover:text-[#f5d67b] transition-colors text-sm font-medium">
-                  Ver Detalles
-                </button>
-              </td>
-            </tr>
-
-            <!-- Cliente 4 -->
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="py-4 px-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 bg-[#2c2c2c] rounded-full flex items-center justify-center text-gray-400 font-bold">
-                    RL
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Roberto López</div>
-                    <div class="text-gray-400 text-sm">Cliente Empresarial</div>
-                  </div>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">roberto.lopez@empresa.com</div>
-                <div class="text-gray-400 text-sm">+52 55 7777 8888</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-white font-medium">15</span>
-                <span class="text-gray-400 text-sm"> veces</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="text-white">08 Ene 2024</div>
-                <div class="text-gray-400 text-sm">13:30</div>
-              </td>
-              <td class="py-4 px-6">
-                <span class="text-[#d4af37] font-medium">$2,350</span>
-              </td>
-              <td class="py-4 px-6">
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Eventos</span>
-                  <span class="bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded text-xs">Whisky</span>
-                </div>
-              </td>
-              <td class="py-4 px-6">
-                <button class="text-[#d4af37] hover:text-[#f5d67b] transition-colors text-sm font-medium">
-                  Ver Detalles
-                </button>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -291,6 +132,8 @@
       </div>
     </div>
   </main>
+
+  <script src="../JS/clientes.js" defer></script>
 
 </body>
 </html>
