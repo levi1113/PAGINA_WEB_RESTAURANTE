@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard - Admin Parrilla 3 Elementos</title>
+  <script src="../JS/auth.js"></script> <!-- SCRIPT GUARDIAN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
@@ -58,7 +59,7 @@
         <div class="flex items-center justify-between">
           <div>
             <p class="text-gray-400 text-sm">Reservas Hoy</p>
-            <p class="text-3xl text-white font-light mt-2">12</p>
+            <p class="text-3xl text-white font-light mt-2" id="stats-reservas-hoy">0</p>
           </div>
           <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,12 +70,11 @@
         <p class="text-green-400 text-sm mt-2">↑ 3 más que ayer</p>
       </div>
 
-      <!-- Clientes Nuevos -->
       <div class="stat-card rounded-2xl p-6">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-400 text-sm">Clientes Nuevos</p>
-            <p class="text-3xl text-white font-light mt-2">8</p>
+            <p class="text-gray-400 text-sm">Clientes Nuevos (30d)</p>
+            <p class="text-3xl text-white font-light mt-2" id="stats-nuevos-clientes">0</p>
           </div>
           <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,36 +85,34 @@
         <p class="text-green-400 text-sm mt-2">↑ 40% este mes</p>
       </div>
 
-      <!-- Ocupación -->
       <div class="stat-card rounded-2xl p-6">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-400 text-sm">Ocupación Hoy</p>
-            <p class="text-3xl text-white font-light mt-2">78%</p>
+            <p class="text-gray-400 text-sm">Reservas Pendientes</p>
+            <p class="text-3xl text-white font-light mt-2" id="stats-pendientes">0</p>
           </div>
           <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
             </svg>
           </div>
         </div>
-        <p class="text-green-400 text-sm mt-2">↑ 12% vs promedio</p>
+        <p class="text-green-400 text-sm mt-2">Acción requerida</p>
       </div>
 
-      <!-- Ingreso Estimado -->
       <div class="stat-card rounded-2xl p-6">
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-gray-400 text-sm">Ingreso Hoy</p>
-            <p class="text-3xl text-white font-light mt-2">$8,240</p>
+            <p class="text-gray-400 text-sm">Total Clientes</p>
+            <p class="text-3xl text-white font-light mt-2" id="stats-total-clientes">0</p>
           </div>
           <div class="w-12 h-12 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-2.37M11 6a3 3 0 11-6 0 3 3 0 016 0zM17 14a3 3 0 10-6 0 3 3 0 006 0zM3 6a3 3 0 116 0 3 3 0 01-6 0zM3 14a3 3 0 106 0 3 3 0 00-6 0z"></path>
             </svg>
           </div>
         </div>
-        <p class="text-green-400 text-sm mt-2">↑ $1,200 vs ayer</p>
+        <p class="text-green-400 text-sm mt-2">Crecimiento histórico</p>
       </div>
     </div>
 
@@ -128,85 +126,10 @@
             <a href="reservas.html" class="text-[#d4af37] text-sm hover:underline">Ver todas</a>
           </div>
           
-          <div class="space-y-4 max-h-96 overflow-y-auto">
-            <!-- Reserva 1 -->
-            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
-              <div class="flex justify-between items-start">
-                <div>
-                  <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">19:00</span>
-                    <span class="text-white font-medium">María González</span>
-                    <span class="text-gray-400 text-sm">4 personas</span>
-                  </div>
-                  <p class="text-gray-400 text-sm">Tel: +52 55 1234 5678 • Aniversario</p>
-                </div>
-                <div class="flex gap-2">
-                  <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
-                    ✅ Confirmar
-                  </button>
-                  <button class="bg-red-600 text-white px-3 py-1 rounded text-xs hover:bg-red-700 transition-colors">
-                    ❌ Cancelar
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reserva 2 -->
-            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
-              <div class="flex justify-between items-start">
-                <div>
-                  <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-green-600 text-white px-2 py-1 rounded text-xs font-medium">20:30</span>
-                    <span class="text-white font-medium">Carlos Rodríguez</span>
-                    <span class="text-gray-400 text-sm">2 personas</span>
-                  </div>
-                  <p class="text-gray-400 text-sm">Tel: +52 55 9876 5432 • ✅ Confirmada</p>
-                </div>
-                <button class="bg-blue-600 text-white px-3 py-1 rounded text-xs hover:bg-blue-700 transition-colors">
-                  📞 Llamar
-                </button>
-              </div>
-            </div>
-
-            <!-- Reserva 3 -->
-            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
-              <div class="flex justify-between items-start">
-                <div>
-                  <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">21:00</span>
-                    <span class="text-white font-medium">Empresa Tech Solutions</span>
-                    <span class="text-gray-400 text-sm">8 personas</span>
-                  </div>
-                  <p class="text-gray-400 text-sm">Evento empresarial • Sala privada</p>
-                </div>
-                <div class="flex gap-2">
-                  <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
-                    ✅ Confirmar
-                  </button>
-                  <button class="bg-gray-600 text-white px-3 py-1 rounded text-xs hover:bg-gray-700 transition-colors">
-                    📋 Detalles
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reserva 4 -->
-            <div class="reserva-item bg-[#1a1a1a] rounded-xl p-4 border border-gray-800">
-              <div class="flex justify-between items-start">
-                <div>
-                  <div class="flex items-center gap-3 mb-2">
-                    <span class="bg-[#d4af37] text-black px-2 py-1 rounded text-xs font-medium">14:00</span>
-                    <span class="text-white font-medium">Familia López</span>
-                    <span class="text-gray-400 text-sm">6 personas</span>
-                  </div>
-                  <p class="text-gray-400 text-sm">Cumpleaños • Menú infantil requerido</p>
-                </div>
-                <button class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition-colors">
-                  ✅ Confirmar
-                </button>
-              </div>
-            </div>
+          <div class="space-y-4 max-h-96 overflow-y-auto" id="lista-proximas-reservas">
+            <p class="text-gray-400 text-sm p-4 text-center">Cargando reservas...</p>
           </div>
+
         </div>
       </div>
 
@@ -276,37 +199,7 @@
     </div>
   </div>
 
-  <script>
-    // Fecha y hora actual
-    function actualizarHora() {
-      const ahora = new Date();
-      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      document.getElementById('fechaActual').textContent = ahora.toLocaleDateString('es-ES', opciones);
-      document.getElementById('horaActual').textContent = ahora.toLocaleTimeString('es-ES');
-    }
-    
-    setInterval(actualizarHora, 1000);
-    actualizarHora();
-
-    // Logout
-    function logout() {
-      if (confirm('¿Está seguro de que desea cerrar sesión?')) {
-        window.location.href = 'login.html';
-      }
-    }
-
-    // Simular confirmación de reservas
-    document.querySelectorAll('button').forEach(button => {
-      if (button.textContent.includes('Confirmar')) {
-        button.addEventListener('click', function() {
-          const nombre = this.closest('.reserva-item').querySelector('.font-medium').textContent;
-          this.innerHTML = '✅ Confirmada';
-          this.className = 'bg-green-600 text-white px-3 py-1 rounded text-xs cursor-default';
-          alert(`Reserva de ${nombre} confirmada exitosamente`);
-        });
-      }
-    });
-  </script>
+  <script src="../JS/dashboard.js" defer></script>
 
 </body>
 </html>
