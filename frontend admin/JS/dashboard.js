@@ -97,3 +97,25 @@ function actualizarHora() {
   if (fechaEl) fechaEl.textContent = ahora.toLocaleDateString('es-ES', opciones);
   if (horaEl) horaEl.textContent = ahora.toLocaleTimeString('es-ES');
 }
+
+async function limpiarNotificaciones() {
+  const token = localStorage.getItem('adminToken');
+  
+  if (!confirm('¿Deseas marcar todas las notificaciones como leídas?')) return;
+
+  try {
+    const response = await fetch('http://localhost:3000/api/admin/clear-notifications', {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (response.ok) {
+      // Recargamos las estadísticas para que la lista se vea vacía
+      cargarEstadisticas();
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}

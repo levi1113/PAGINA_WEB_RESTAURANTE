@@ -179,20 +179,21 @@ router.get('/dashboard-stats', protect, async (req, res) => {
 
     // --- NUEVAS CONSULTAS PARA NOTIFICACIONES ---
 
-    // 6. Notificaciones: Últimas 3 reservas pendientes creadas (Alertas amarillas)
+    // 6. Alertas amarillas (Solo no leídas)
     const [notifReservas] = await connection.query(
       `SELECT r.id, c.name, r.reservation_time, 'reserva' as tipo 
-       FROM reservations r 
-       JOIN clients c ON r.client_id = c.id 
-       WHERE r.status = 'pending' 
-       ORDER BY r.created_at DESC LIMIT 3`
+      FROM reservations r 
+      JOIN clients c ON r.client_id = c.id 
+      WHERE r.status = 'pending' AND r.is_read = 0
+      ORDER BY r.created_at DESC LIMIT 5`
     );
 
-    // 7. Notificaciones: Últimos 3 clientes registrados (Alertas verdes)
+    // 7. Alertas verdes (Solo no leídos)
     const [notifClientes] = await connection.query(
       `SELECT id, name, 'cliente' as tipo 
-       FROM clients 
-       ORDER BY created_at DESC LIMIT 3`
+      FROM clients 
+      WHERE is_read = 0
+      ORDER BY created_at DESC LIMIT 5`
     );
 
     // Liberar la conexión al pool
@@ -300,6 +301,20 @@ router.put('/settings', protect, async (req, res) => {
   } catch (error) {
     console.error('Error al actualizar la configuración:', error.message);
     res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+// PUT /api/admin/clear-notifications
+router.put('/clear-notifications', protect, async (req, res) => {
+  try {
+    const connection = await pool.getConnection();
+    // Marcamos todas las notificaciones actuales como leídas
+    await connection.query("UPDATE reservations SET is_read = 1 WHERE status = 'pending'");
+    await connection.query("UPDATE clients SET is_read = 1");
+    connection.release();
+    res.json({ message: 'Notificaciones limpiadas' });
+  } catch (error) {
+    res.status(500).json({ error: 'Error al limpiar notificaciones' });
   }
 });
 
