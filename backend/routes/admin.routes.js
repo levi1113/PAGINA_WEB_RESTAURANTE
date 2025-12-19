@@ -147,23 +147,27 @@ router.get('/dashboard-stats', protect, async (req, res) => {
   try {
     const connection = await pool.getConnection();
 
-    // 1. Contar reservas de hoy
+    // 1. Contar reservas de hoy (que no estén canceladas)
     const [reservasHoy] = await connection.query(
       "SELECT COUNT(*) as total FROM reservations WHERE DATE(reservation_date) = CURDATE() AND status != 'cancelled'"
     );
-    // 2. Contar clientes nuevos (últimos 30 días)
+
+    // 2. Contar clientes nuevos (registrados en los últimos 30 días)
     const [nuevosClientes] = await connection.query(
       "SELECT COUNT(*) as total FROM clients WHERE created_at >= CURDATE() - INTERVAL 30 DAY"
     );
-    // 3. Contar reservas pendientes (Total)
+
+    // 3. Contar total de reservas pendientes
     const [pendientes] = await connection.query(
       "SELECT COUNT(*) as total FROM reservations WHERE status = 'pending'"
     );
-    // 4. Contar total de clientes
+
+    // 4. Contar el total histórico de clientes
     const [totalClientes] = await connection.query(
       "SELECT COUNT(*) as total FROM clients"
     );
-    // 5. Obtener las 5 próximas reservas pendientes (LA MANTENEMOS)
+
+    // 5. Obtener las 5 próximas reservas pendientes (para la lista central)
     const [proximasReservas] = await connection.query(
       `SELECT r.id, r.reservation_time, r.num_guests, c.name as client_name
        FROM reservations r
@@ -173,8 +177,28 @@ router.get('/dashboard-stats', protect, async (req, res) => {
        LIMIT 5`
     );
 
+    // --- NUEVAS CONSULTAS PARA NOTIFICACIONES ---
+
+    // 6. Notificaciones: Últimas 3 reservas pendientes creadas (Alertas amarillas)
+    const [notifReservas] = await connection.query(
+      `SELECT r.id, c.name, r.reservation_time, 'reserva' as tipo 
+       FROM reservations r 
+       JOIN clients c ON r.client_id = c.id 
+       WHERE r.status = 'pending' 
+       ORDER BY r.created_at DESC LIMIT 3`
+    );
+
+    // 7. Notificaciones: Últimos 3 clientes registrados (Alertas verdes)
+    const [notifClientes] = await connection.query(
+      `SELECT id, name, 'cliente' as tipo 
+       FROM clients 
+       ORDER BY created_at DESC LIMIT 3`
+    );
+
+    // Liberar la conexión al pool
     connection.release();
 
+    // Enviar respuesta completa al frontend
     res.json({
       stats: {
         reservasHoy: reservasHoy[0].total,
@@ -182,7 +206,9 @@ router.get('/dashboard-stats', protect, async (req, res) => {
         pendientes: pendientes[0].total,
         totalClientes: totalClientes[0].total,
       },
-      proximasReservas: proximasReservas 
+      proximasReservas: proximasReservas,
+      // Combinamos ambos tipos de notificaciones en un solo arreglo
+      notificaciones: [...notifReservas, ...notifClientes]
     });
 
   } catch (error) {
